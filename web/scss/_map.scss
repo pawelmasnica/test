@@ -1,0 +1,14 @@
+section.section{
+  .map-wrapper{
+    position: relative;
+
+    .map-items{
+      position: absolute;
+      z-index: 10;
+      bottom:1rem;
+      left:1rem;
+    }
+
+  }
+
+}

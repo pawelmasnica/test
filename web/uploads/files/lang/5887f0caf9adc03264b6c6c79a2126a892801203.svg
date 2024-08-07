@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ee1c25;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-6 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: url(#radial-gradient);
+        mix-blend-mode: multiply;
+        opacity: .3;
+      }
+
+      .cls-4 {
+        fill: #0b4ea2;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="cls-2" cx="60" cy="60" r="49.95"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="60" cy="60" fx="60" fy="60" r="49.95" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".36" stop-color="#fdfdfd"/>
+      <stop offset=".48" stop-color="#f6f6f6"/>
+      <stop offset=".58" stop-color="#eaeaea"/>
+      <stop offset=".65" stop-color="#d9d9d9"/>
+      <stop offset=".71" stop-color="#c3c3c3"/>
+      <stop offset=".77" stop-color="#a8a8a8"/>
+      <stop offset=".82" stop-color="#878787"/>
+      <stop offset=".87" stop-color="#626262"/>
+      <stop offset=".91" stop-color="#373737"/>
+      <stop offset=".95" stop-color="#090909"/>
+      <stop offset=".96" stop-color="#000"/>
+    </radialGradient>
+  </defs>
+  <g class="cls-6">
+    <g id="Layer_1" data-name="Layer 1">
+      <g class="cls-7">
+        <g>
+          <rect class="cls-5" x="3.37" y="10.05" width="150.13" height="33.3"/>
+          <rect class="cls-4" x="3.37" y="43.35" width="150.13" height="33.3"/>
+          <rect class="cls-1" x="3.37" y="76.65" width="150.13" height="33.3"/>
+          <path class="cls-5" d="m68.02,35.03v23.13c0,5.05-1.51,9.9-4.24,13.98-.51.76-1.06,1.51-1.66,2.21-1.48,1.77-3.22,3.35-5.18,4.67l-8.49,5.74-8.49-5.74c-1.96-1.33-3.7-2.91-5.18-4.67-.78-.92-1.48-1.9-2.11-2.92-2.44-3.93-3.78-8.51-3.78-13.28v-23.13h39.13m1.75-1.75H27.14v24.89c0,5.02,1.4,9.93,4.05,14.2.67,1.08,1.43,2.13,2.26,3.12,1.61,1.92,3.48,3.6,5.54,5l8.49,5.74.98.66.98-.66,8.49-5.74c2.07-1.4,3.93-3.08,5.54-5,.62-.73,1.21-1.53,1.77-2.37,2.96-4.44,4.53-9.61,4.53-14.95v-24.89h0Z"/>
+          <path class="cls-1" d="m68.02,35.03v23.13c0,5.05-1.51,9.9-4.24,13.98-.86-1.92-2.51-4.43-4.98-4.43-2.78,0-4.5,2-4.88,2.8-1.11-2.66-2.71-5.12-5.86-5.15-3.15.03-4.76,2.49-5.86,5.15-.38-.8-2.1-2.8-4.88-2.8-2.18,0-3.72,1.94-4.64,3.72-2.44-3.93-3.78-8.51-3.78-13.28v-23.13h39.13Z"/>
+          <rect class="cls-5" x="46.14" y="36.76" width="3.84" height="31.37"/>
+          <rect class="cls-5" x="46.14" y="36.84" width="3.84" height="19.2" transform="translate(94.5 -1.62) rotate(90)"/>
+          <rect class="cls-5" x="46.14" y="43.57" width="3.84" height="23.88" transform="translate(103.57 7.45) rotate(90)"/>
+          <polygon class="cls-5" points="36.12 53.59 36.12 52.44 39.72 53.59 36.12 53.59"/>
+          <polygon class="cls-5" points="38.46 44.52 38.46 43.37 42.06 44.52 38.46 44.52"/>
+          <polygon class="cls-5" points="49.98 36.76 51.13 36.76 49.98 40.36 49.98 36.76"/>
+          <polygon class="cls-5" points="46.14 36.76 44.99 36.76 46.14 40.36 46.14 36.76"/>
+          <polygon class="cls-5" points="57.66 44.52 57.66 43.37 54.06 44.52 57.66 44.52"/>
+          <polygon class="cls-5" points="57.66 48.36 57.66 49.51 54.06 48.36 57.66 48.36"/>
+          <polygon class="cls-5" points="38.46 48.36 38.46 49.51 42.06 48.36 38.46 48.36"/>
+          <polygon class="cls-5" points="60 53.59 60 52.44 56.4 53.59 60 53.59"/>
+          <polygon class="cls-5" points="60 57.43 60 58.58 56.4 57.43 60 57.43"/>
+          <polygon class="cls-5" points="36.12 57.43 36.12 58.58 39.72 57.43 36.12 57.43"/>
+          <path class="cls-4" d="m63.78,72.15c-.51.77-1.06,1.51-1.66,2.21-1.48,1.77-3.22,3.35-5.18,4.67l-8.49,5.74-8.49-5.74c-1.96-1.33-3.7-2.91-5.18-4.67-.78-.92-1.48-1.89-2.11-2.92.92-1.78,2.46-3.72,4.64-3.72,2.78,0,4.5,2,4.88,2.8,1.11-2.66,2.71-5.12,5.86-5.15,3.15.03,4.75,2.49,5.86,5.15.38-.8,2.1-2.8,4.88-2.8,2.48,0,4.13,2.5,4.98,4.43Z"/>
+        </g>
+        <circle class="cls-3" cx="60" cy="60" r="49.95"/>
+      </g>
+    </g>
+  </g>
+</svg>

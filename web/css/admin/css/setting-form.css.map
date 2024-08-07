@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,qCAAc;EACZ,MAAM,EAAE,CAAC;EACT,6CAAQ;IACN,OAAO,EAAE,IAAI;EAGb,uDAAY;IACV,KAAK,EAAE,IAAI;IACX,KAAK,EAAE,GAAG;IACV,OAAO,EAAE,EAAE",
+"sources": ["../scss/setting-form.scss"],
+"names": [],
+"file": "setting-form.css"
+}

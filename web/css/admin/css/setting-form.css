@@ -1,0 +1,10 @@
+form.admin-setting-form > .form-group {
+  margin: 0; }
+  form.admin-setting-form > .form-group > label {
+    display: none; }
+  form.admin-setting-form > .form-group .form .form-group {
+    float: left;
+    width: 49%;
+    padding: 1%; }
+
+/*# sourceMappingURL=setting-form.css.map */

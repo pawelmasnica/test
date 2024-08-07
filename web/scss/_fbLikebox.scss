@@ -1,0 +1,52 @@
+.fbLikebox {
+  cursor: pointer;
+  position: fixed;
+  width: 300px;
+  height: 400px;
+  top: 50%;
+  margin-top: -43px;
+  z-index: 9999;
+  @include transition();
+
+
+
+  .fb-button {
+    position: absolute;
+    width: 33px;
+    height: 87px;
+
+  }
+
+  .fbLikeboxContainer {
+    width: 300px;
+    height: 400px;
+    float: left;
+  }
+}
+
+.fbLikebox.right{
+  right: -300px;
+
+  &.open {
+    right: 0;
+  }
+
+  .fb-button{
+    float: left;
+    margin-left: -33px;
+    background: url("../images/common/facebook-right.png") no-repeat;
+  }
+}
+
+.fbLikebox.left{
+  left: -300px;
+  &.open {
+    left: 0;
+  }
+
+  .fb-button{
+    right: -33px;
+    background: url("../images/common/facebook-left.png") no-repeat;
+  }
+}
+

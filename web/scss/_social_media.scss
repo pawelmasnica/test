@@ -1,0 +1,157 @@
+.top-content{
+  .social-media {
+    ul.list-inline {
+      margin: 0 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include tablet-lg {
+        justify-content: space-around;
+        margin: 0;
+      }
+
+
+      li {
+        width: auto;
+
+
+        a {
+          min-width: auto;
+          border:1px solid var(--header-color-bg);
+          width: 1.6rem;
+          height: 1.6rem;
+          margin: 0.2rem;
+          @include rounded(50%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+
+          span {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2rem;
+            height: 2rem;
+            margin: 0 0.2rem;
+
+            svg {
+              height: 0.8rem;
+              width: auto;
+              margin: 0;
+
+              g,path, {
+                fill: white;
+              }
+
+
+            }
+          }
+
+
+        }
+
+
+        &:hover {
+          a {
+            border:1px solid rgba(255,255,255,0.5);
+            span {
+
+              svg {
+                path,g {
+                  fill: rgba(255,255,255,0.5)
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    p {
+      display: none;
+    }
+
+  }
+}
+
+.mobile-panel{
+  .social-media {
+    ul.list-inline {
+      margin: 0 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include tablet-lg {
+        justify-content: space-around;
+        margin: 0;
+      }
+
+
+      li {
+        width: auto;
+
+
+        a {
+          min-width: auto;
+          border:1px solid var(--color-primary);
+          width: 1.7rem;
+          height: 1.7rem;
+          margin: 0.2rem;
+          @include rounded(50%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+
+          span {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2rem;
+            height: 2rem;
+            margin: 0 0.2rem;
+
+            svg {
+              height: 0.8rem;
+              width: auto;
+              margin: 0;
+
+              g,path, {
+                fill: var(--color-primary);
+              }
+
+
+            }
+          }
+
+
+        }
+
+
+        &:hover {
+          a {
+            border:1px solid var(--color-secondary);
+            span {
+
+              svg {
+                path,g {
+                  fill: var(--color-secondary);
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    p {
+      display: none;
+    }
+
+  }
+}

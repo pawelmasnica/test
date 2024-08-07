@@ -1,0 +1,15 @@
+form.admin-setting-form {
+  > .form-group {
+    margin: 0;
+    > label {
+      display: none;
+    }
+    .form {
+      .form-group {
+        float: left;
+        width: 49%;
+        padding: 1%;
+      }
+    }
+  }
+}

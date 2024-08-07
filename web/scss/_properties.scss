@@ -1,0 +1,107 @@
+.properties {
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .box-properties {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .properties-name {
+      svg {
+        width: 1.6rem;
+        height: auto;
+        margin-right: 1rem;
+        path{
+          fill:var(--color-primary);
+        }
+      }
+    }
+    .properties-value {
+      padding: 0.2rem 0;
+    }
+  }
+}
+
+@include theme1 {
+  .properties {
+    .box-properties {
+      .properties-name {
+        svg {
+          path {
+            fill: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include theme2 {
+  .properties {
+    .box-properties {
+      .properties-name {
+        svg {
+          path {
+            fill: $color-three;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.box {
+  .properties {
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    .box-properties {
+      margin: 0.2rem 0;
+      flex-direction: row;
+      .prop-name{
+        svg {
+          height: auto;
+          width: 1.7rem;
+          margin-right: 1rem;
+        }
+      }
+
+    }
+  }
+}
+
+.page-properties {
+  background-color: $color-very-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .property {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .name svg {
+      width: 3rem;
+      height: auto;
+
+
+    }
+
+    .value {
+
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,215 @@
+.video-container {
+  position: fixed;
+  z-index: 1;
+}
+
+.has-error .help-block {
+  display: none;
+}
+
+.login-container {
+  display: table;
+  width: 100%;
+  min-height: 100%;
+  z-index: 2;
+  color: $tertiary-color;
+  position: absolute;
+  top: 0;
+
+  .fb-login-button {
+    color: $color-white;
+    background-color: #3B5998;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 10px;
+
+    &:hover {
+      background-color: darken(#3B5998, 10%);
+    }
+  }
+
+
+  .login-box {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    @include tablet-md {
+      padding: 0 15px;
+    }
+
+    .login-container-box {
+      margin: 0 auto;
+      width: 400px;
+      @include tablet-md {
+        width: 100%;
+      }
+
+      .login-body {
+        background: rgba(51, 65, 78, 0.8);
+        padding: 20px;
+
+        form {
+          margin-top: 15px;
+        }
+
+      }
+    }
+
+  }
+
+
+  .login-buttons {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include phone-sm{
+      flex-direction: column;
+      .btn-group{
+        margin: 0.3rem 0;
+      }
+    }
+
+    .btn-group{
+      a,button{
+        padding: 0.875rem 1rem;
+      }
+    }
+
+  }
+  .login-buttons  > .btn-group{
+    flex: 1;
+  }
+
+  .login-box .login-body .form-control {
+    border: 0px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.875rem 1rem;
+    color: $tertiary-color;
+    height: auto;
+    font-size: 1.2rem;
+  }
+
+  .login-box .login-body .btn-link {
+    color: $tertiary-color;
+    border: 0;
+  }
+
+  .login-box .login-body .login-or {
+    width: 40px;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 25px auto;
+    text-align: center;
+    line-height: 25px;
+    color: $tertiary-color;
+  }
+
+  .login-footer a,
+  label {
+    color: $tertiary-color !important;
+    margin: 0.5rem 0 0.2rem 0;
+  }
+
+  .login-footer a,
+  .login-footer {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.9);
+  }
+
+  .login-body {
+    margin-bottom: 5px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  .login-title h5 {
+    font-weight: 300;
+    text-align: right;
+    color: $tertiary-color;
+  }
+
+  .footer-links {
+    margin-top: 10px;
+    padding-top: 7px;
+    display: block;
+
+    ul {
+      li {
+        position: relative;
+
+        a {
+          color: $tertiary-color;
+          display: inline-block;
+          padding: 3px;
+
+        }
+
+        &:hover {
+          a {
+            color: $color-white;
+          }
+        }
+
+
+      }
+
+    }
+
+  }
+
+  .login-title {
+    text-align: left;
+
+    small {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  label {
+
+    & + input.agree-checkbox {
+      float: left;
+      margin-right: 5px;
+      position: relative;
+      top: -4px;
+    }
+  }
+
+}
+
+/**
+===========================================
+MEDIA QUERIES
+===========================================
+*/
+
+/* Small devices (landscape phones, 34em and up)*/
+@media (min-width: 0em) {
+
+  .login-container .login-box {
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) {
+  .login-container .login-box {
+    width: 400px;
+  }
+}
+
+/*Large devices (desktops, 62em and up)*/
+@media (min-width: 62em) {
+
+}
+
+/*Extra large devices (large desktops, 75em and up)*/
+@media (min-width: 75em) {
+
+}

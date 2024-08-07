@@ -1,0 +1,37 @@
+section.section {
+
+  ul.pagination {
+    list-style: none;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+      li {
+      &:after, &:before {
+        content: none;
+      }
+
+      a, span {
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        display: flex;
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+
+        &.arrow {
+          font-size: 1.4rem;
+        }
+      }
+
+      &:hover, &.active {
+        > a, > span {
+          background-color: var(--color-primary);
+          color: white;
+        }
+      }
+    }
+  }
+}

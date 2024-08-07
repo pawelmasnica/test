@@ -1,0 +1,101 @@
+.newsletter-confirmation {
+  position: absolute;
+  text-align: center;
+  padding: 3rem;
+  top:50%;
+  left: 50%;
+  @include translate(-50%, -50%);
+  margin: auto;
+  max-width: 32rem;
+}
+.newsletter-confirmation.notice {
+  background-color: #c8f4e1;
+}
+.newsletter-confirmation.error {
+  background-color: #f4c8c8;
+}
+
+.newsletter-component {
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include phone-sm {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    label {
+      display: none;
+    }
+
+    input, button {
+      font-family: var(--font-text);
+      padding: 1.5rem;
+      height: 46px;
+      border: 1px solid white;
+      background-color: var(--color-primary);
+      @include rounded(0);
+      color: white;
+      @include phone-sm {
+
+        width: 100%;
+      }
+    }
+
+    input::placeholder {
+      color: white;
+    }
+
+
+    input {
+      margin: 0 1rem 0 0;
+      min-width: 20rem;
+      @include phone-sm {
+        margin:0;
+        min-width: auto;
+      }
+    }
+  }
+
+  .newsletter-button{
+    background-color: var(--color-secondary);
+    border:1px solid white !important;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: .875rem;
+    font-weight: 400;
+    padding: 1.5rem;
+    height: 46px;
+    position: relative;
+    transition: all .2s ease-in-out 0s;
+    color: $color-white;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    @include phone-sm {
+      margin-top: 5px;
+      width: 100%;
+    }
+    &:hover{
+      background-color: var(--color-primary);
+    }
+
+    span{
+      white-space: nowrap;
+    }
+    svg{
+      margin-left: 1rem;
+      height: 1.5rem;
+      width: auto;
+      path{
+        fill: $color-white;
+      }
+    }
+  }
+}

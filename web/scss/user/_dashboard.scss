@@ -1,0 +1,146 @@
+.dashboard {
+  .hello {
+    position: relative;
+    margin-top: 30px;
+
+    border: #e3e3e3 1px solid;
+    border-top: 3px solid var(--color-primary);
+    padding: 10px 25px;
+    background-color: $color-white;
+    @include tablet-md() {
+      text-align: center;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      @include tablet-md() {
+        position: relative;
+      }
+      @include tablet-md() {
+        text-align: center;
+      }
+    }
+
+    .uhave {
+      text-align: right;
+      @include tablet-md() {
+        text-align: center;
+      }
+    }
+
+    .header {
+      margin-left: 100px;
+      @include tablet-md() {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+
+      h2 {
+        font-size: 30px;
+        font-family: var(--font-header);
+
+        strong {
+          color: var(--color-primary);
+        }
+      }
+    }
+
+
+    .points {
+      color: var(--color-primary);
+      font-size: 34px;
+    }
+  }
+
+  .boxes {
+    padding: 0 5px;
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 30px;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .box {
+      max-width: 25%;
+      flex: 1 0 25%;
+      display: flex;
+      padding:10px;
+      flex-direction: column;
+      @include min-desktop-xl() {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      @include tablet-md() {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+
+      .box-row-colors {
+        display: flex;
+
+        .yellow {
+          height: 12px;
+          background-color: var(--color-secondary);
+        }
+
+        .grey {
+          height: 12px;
+          background-color: $color-grey;
+        }
+      }
+
+      .box-row {
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        height: 100%;
+
+        .icon {
+          display: flex;
+          justify-content: center;
+          /* align horizontal */
+          align-items: center;
+          text-align: center;
+          background-color: var(--color-primary);
+          padding: 3px;
+        }
+
+
+        .text {
+          padding: 10px;
+          text-align: center;
+          background-color: $color-white;
+          justify-content: center;
+          flex-direction: column;
+          display: flex;
+
+          h2 {
+            font-size: 45px;
+            color: var(--color-primary);
+          }
+
+          h3 {
+            font-size: 20px;
+            color: var(--color-primary);
+          }
+
+          p {
+
+          }
+        }
+
+      }
+
+      .col1 {
+        width: 30%;
+      }
+
+      .col2 {
+        width: 70%;
+      }
+    }
+  }
+}

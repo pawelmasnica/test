@@ -1,0 +1,332 @@
+
+
+@mixin layoutMode($type, $e, $d1, $d2, $d3, $d4,$d5, $maxWidth) {
+  .ge-canvas.ge-layout-#{$type} {
+    max-width: $maxWidth;
+    margin-left: auto;
+    margin-right: auto;
+
+    @for $i from 1 through 12 {
+      @include disable-columns($d1, $d2, $d3, $d4, $d5, $i);
+    }
+    @for $i from 1 through 12 {
+      @include generate-columns($e, $i);
+    }
+  }
+}
+
+@mixin disable-columns($d1, $d2, $d3, $d4,$d5, $i: 1) {
+  $col-name1: '';
+  $col-name2: '';
+  $col-name3: '';
+  $col-name4: '';
+  $col-name5: '';
+
+
+  @if $d1 == '' {
+    $col-name1: #{$i};
+  } @else {
+    $col-name1: "#{$d1}-#{$i}";
+  }
+  @if $d2 == '' {
+    $col-name2: #{$i};
+  } @else {
+    $col-name2: "#{$d2}-#{$i}";
+  }
+  @if $d3 == '' {
+    $col-name3: #{$i};
+  } @else {
+    $col-name3: "#{$d3}-#{$i}";
+  }
+
+  @if $d4 == '' {
+    $col-name4: #{$i};
+  } @else {
+    $col-name4: "#{$d4}-#{$i}";
+  }
+
+  @if $d5 == '' {
+    $col-name5: #{$i};
+  } @else {
+    $col-name5: "#{$d5}-#{$i}";
+  }
+
+
+  .col-#{$col-name1},
+  .col-#{$col-name2},
+  .col-#{$col-name3},
+  .col-#{$col-name4},
+  .col-#{$col-name5},
+  .col-#{$i} {
+    width: inherit;
+  }
+
+  .order-#{$col-name1},
+  .order-#{$col-name2},
+  .order-#{$col-name3},
+  .order-#{$col-name4},
+  .order-#{$i} {
+    order: inherit;
+  }
+}
+
+
+@mixin generate-columns($e, $i: 1) {
+  $col-name: '';
+  $order-name: '';
+  @if $e == '' {
+    $col-name: ".col-#{$i}";
+    $order-name: ".order-#{$i}";
+  } @else {
+    $col-name: ".col-#{$e}-#{$i}";
+    $order-name: ".order-#{$e}-#{$i}";
+  }
+
+  #{$col-name} {
+    width: $i * 8.33333333333%;
+    flex: 0 0 $i * 8.33333333333%;
+    max-width: $i * 8.33333333333%;
+  }
+  #{$order-name} {
+    order: $i;
+  }
+
+}
+
+
+$editGutter: 5px;
+$drawerHeight: 32px;
+$rowTextColor: #666;
+$colColor: #2FA4E7;
+$colTextColor: darken($colColor, 10%);
+
+.ge-mainControls {
+  position: relative;
+  min-height: 22px;
+  margin-bottom: 10px;
+
+  .ge-wrapper {
+    padding-top: 5px;
+  }
+
+  .ge-wrapper.ge-top {
+    .container {
+      margin: 0;
+      padding: 0;
+      width: auto;
+    }
+  }
+
+  .ge-wrapper.ge-fixed {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+  }
+
+  .ge-addRowGroup {
+    .btn.btn-primary {
+      background: #f4f4f4;
+      color: $rowTextColor;
+      border-color: #999;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background: #E3E3E3;
+      }
+    }
+
+    .ge-row-icon {
+      width: 4rem;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .column {
+        height: 0.8rem;
+        background: #666;
+        padding: 0;
+        border-left: 2px solid #f4f4f4;
+      }
+    }
+  }
+
+  .ge-layout-mode {
+    margin-left: 5px;
+
+    button, &.btn-group {
+      padding: 0.5rem;
+    }
+
+  }
+
+  .btn:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  .pull-right {
+    float: right;
+  }
+
+  .dropdown-menu a {
+    cursor: default;
+  }
+}
+
+.column-bg {
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-size: cover;
+}
+
+
+.ge-html-output {
+  width: 100%;
+  display: none;
+}
+
+/* Not editing */
+.ge-canvas {
+  .ge-tools-drawer {
+    display: none;
+  }
+}
+
+/* While editing */
+.ge-canvas.ge-editing {
+
+  .ge-tools-drawer {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: blue;
+    margin: 0 -#{$editGutter} #{$editGutter};
+    display: block;
+    width: calc(100% + 2 * #{$editGutter});
+
+
+    > a {
+      display: inline-block;
+      padding: 5px;
+
+    }
+
+    > a:hover {
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+    }
+
+    .ge-details {
+      padding: 5px;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      display: none;
+
+      .btn-group {
+        a {
+          color: #333;
+
+          &.active {
+            color: white;
+          }
+        }
+
+        a:hover {
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+
+      input.ge-id {
+        border: 1px solid #7F7F7F;
+        border-radius: 4px;
+        font-size: 11px;
+        padding: 2px 5px;
+        margin-right: 5px;
+        width: 80px;
+      }
+    }
+  }
+
+  .row {
+    position: relative;
+    display: flex;
+    background-color: #efefef;
+    border: 1px solid rgb(153, 153, 153);
+    padding: 0 $editGutter $editGutter;
+    margin-bottom: $editGutter;
+    margin-left: 0;
+    margin-right: 0;
+    flex-wrap: wrap;
+
+    > .ge-tools-drawer {
+      flex: 1 1 100%;
+      width: 100%;
+
+      > a {
+        color: #666;
+      }
+
+      > a.ge-add-column {
+        color: $colTextColor;
+      }
+
+      // background: rgba(153,153,153,0.2);
+      background: #e5e5e5;
+    }
+  }
+
+  .column {
+    background-color: darken($colColor, 85%);
+    border: 1px solid $colColor;
+    padding: 0 $editGutter $editGutter;
+
+    > .ge-tools-drawer {
+      a {
+        color: $colTextColor;
+      }
+
+      > a.ge-add-row {
+        color: $rowTextColor;
+      }
+
+      background: #afd5ea;
+    }
+  }
+
+  .col-bg {
+    .ge-content {
+
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  /* Content area */
+  .ge-content-type-tinymce.active {
+    outline: 1px dotted #333;
+  }
+
+  /* Sorting */
+  .ui-sortable-placeholder {
+    background: darken(yellow, 80%);
+    visibility: visible !important;
+    min-height: 50px;
+    max-height: 100px;
+  }
+}
+
+/* Layout modes */
+
+
+@include layoutMode(phone-xs, '', xxl, xl, lg, md, sm, 576px);
+
+@include layoutMode(phone-sm, sm, xxl, xl, lg, md, '', 768px);
+@include layoutMode(tablet-md, md, xxl, xl, lg, sm, '', 992px);
+@include layoutMode(tablet-lg, lg, xxl, xl, md, sm, '', 1200px);
+@include layoutMode(desktop-xl, xl, xxl, lg, md, sm, '', 1400px);
+@include layoutMode(desktop-xxl, xxl, xl, lg, md, sm, '', none);

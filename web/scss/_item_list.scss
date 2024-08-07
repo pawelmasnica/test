@@ -1,0 +1,344 @@
+#item-list-container-ajax {
+  padding-top: 1rem;
+  @include phone-sm {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.item-list-container {
+  @include phone-sm {
+    margin-top: 0.5rem;
+  }
+}
+
+
+.item-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  justify-content: center;
+
+  .info-rate-restrictions{
+    color: var(--color-primary);
+    font-weight: bold;
+    text-align: center;
+  }
+  .item {
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    background-color: white;
+    @include rounded(0.5rem);
+    @include pageShadow();
+
+
+    .prop-val {
+      position: absolute;
+      background: var(--color-primary);
+      color: white;
+      font-size: 0.7rem;
+      z-index: 999;
+      padding: 0.1rem 0.5rem;
+      margin-top: 1rem;
+
+      svg{
+        width: auto;
+        height: 0.8rem;
+        path{
+          fill: white;
+        }
+      }
+    }
+
+
+    a {
+      @include transition();
+
+      &:hover {
+        .img-container {
+          @include opacity(0.7)
+        }
+      }
+    }
+
+    @include phone-sm {
+      width: 100%;
+      margin: 1rem 0;
+    }
+
+
+    .reservation-data-request {
+      flex-direction: column;
+      display: flex;
+      justify-content: space-between;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: 9999;
+      background: var(--color-primary);
+      color: white;
+      padding: 0.3rem 0.6rem;
+      width: fit-content;
+
+      .price {
+        font-size: 1rem;
+
+
+        span {
+          font-size: 1.4rem;
+          font-family: var(--font-header);
+        }
+      }
+
+      .small-info {
+        font-size: 0.7rem;
+      }
+    }
+
+    .img-container {
+      @include transition();
+      padding-bottom: 66.66%;
+      position: relative;
+
+
+      .group-item-media {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+
+        .item-gradient {
+          height: 2rem;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: rgb(255, 255, 255);
+          background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        .slide-item {
+          @include transition();
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-size: cover;
+          background-position: center;
+
+          &:hover {
+            .slide-item {
+              @include opacity(0.8);
+            }
+          }
+
+
+        }
+
+      }
+    }
+
+    .item-data {
+      padding: 0 1rem;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+
+      address {
+        padding: 0.5rem 0;
+        text-align: center;
+      }
+
+      .header-props {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+
+        h3 {
+          font-size: 1.1rem;
+          text-align: center;
+          font-weight: 500;
+          @include phone-sm {
+            min-height: auto;
+          }
+        }
+
+
+        address {
+          font-size: 0.875rem;
+          min-height: 2rem;
+          overflow: hidden;
+        }
+      }
+
+      header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding: 1rem 0;
+
+        .price-from-wrapper {
+          text-align: center;
+
+          display: flex;
+          flex-direction: column;
+          border-left: 1px solid $color-grey;
+
+          .prop-detail {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+          }
+
+          span.price-from-value {
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+
+          span.price-from-txt {
+            font-weight: normal;
+          }
+        }
+      }
+
+    }
+
+    .item-properties {
+      color: $color-grey;
+      padding: 1rem;
+      border-top: 1px solid #EBEBEB;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+
+      .item-properties-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        & > * {
+          padding-right: 0.1rem;
+        }
+      }
+
+      svg, img {
+        margin-right: 0.3rem;
+        width: auto;
+        height: 1.5rem;
+      }
+    }
+
+    .button-wrapper {
+      margin: 0 auto;
+      max-width: 30rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      &>*{
+        width: 14rem;
+        max-width:14rem;
+        margin: 0.2rem 0;
+      }
+
+      @include phone-sm {
+        flex-direction: column;
+      }
+
+
+      .book-now {
+        flex: 1;
+        background-color: var(--color-secondary);
+        border-color: var(--color-secondary);
+
+        &:hover {
+          background-color: var(--color-primary);
+          border-color: var(--color-primary);
+        }
+      }
+    }
+
+    .prop-detail {
+      color: var(--color-primary);
+    }
+
+
+    small {
+      margin-bottom: 1rem;
+      margin-top: -1.5rem;
+      display: block;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+  }
+
+
+}
+
+section.section {
+  .filter-container {
+    margin-bottom: 1rem;
+
+    .filters-label {
+      font-weight: 500;
+    }
+
+    ul {
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 0;
+
+      li:before {
+        display: none;
+      }
+
+      li {
+        list-style: none;
+        margin: 0.2rem;
+
+        .filter-tag, a.remove-filter {
+          background-color: white;
+          color: var(--color-primary);
+          font-size: 0.875rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.2rem 1rem;
+          border: 1px solid #DEDEDE;
+          @include border-radius(1rem);
+
+          svg {
+            margin-left: 0.3rem;
+          }
+
+          &.active, &:hover {
+            background-color: var(--color-primary);
+            color: white;
+
+            svg {
+              path {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

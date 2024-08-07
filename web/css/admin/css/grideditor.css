@@ -1,0 +1,1869 @@
+.ge-mainControls {
+  position: relative;
+  min-height: 22px;
+  margin-bottom: 10px;
+}
+.ge-mainControls .ge-wrapper {
+  padding-top: 5px;
+}
+.ge-mainControls .ge-wrapper.ge-top .container {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+.ge-mainControls .ge-wrapper.ge-fixed {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+}
+.ge-mainControls .ge-addRowGroup .btn.btn-primary {
+  background: #f4f4f4;
+  color: #666;
+  border-color: #999;
+  display: flex;
+  align-items: center;
+}
+.ge-mainControls .ge-addRowGroup .btn.btn-primary:hover {
+  background: #E3E3E3;
+}
+.ge-mainControls .ge-addRowGroup .ge-row-icon {
+  width: 4rem;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.ge-mainControls .ge-addRowGroup .ge-row-icon .column {
+  height: 0.8rem;
+  background: #666;
+  padding: 0;
+  border-left: 2px solid #f4f4f4;
+}
+.ge-mainControls .ge-layout-mode {
+  margin-left: 5px;
+}
+.ge-mainControls .ge-layout-mode button, .ge-mainControls .ge-layout-mode.btn-group {
+  padding: 0.5rem;
+}
+.ge-mainControls .btn:focus {
+  box-shadow: none;
+  outline: none;
+}
+.ge-mainControls .pull-right {
+  float: right;
+}
+.ge-mainControls .dropdown-menu a {
+  cursor: default;
+}
+
+.column-bg {
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-size: cover;
+}
+
+.ge-html-output {
+  width: 100%;
+  display: none;
+}
+
+/* Not editing */
+.ge-canvas .ge-tools-drawer {
+  display: none;
+}
+
+/* While editing */
+.ge-canvas.ge-editing {
+  /* Content area */
+  /* Sorting */
+}
+.ge-canvas.ge-editing .ge-tools-drawer {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: blue;
+  margin: 0 -5px 5px;
+  display: block;
+  width: calc(100% + 2 * 5px);
+}
+.ge-canvas.ge-editing .ge-tools-drawer > a {
+  display: inline-block;
+  padding: 5px;
+}
+.ge-canvas.ge-editing .ge-tools-drawer > a:hover {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.ge-canvas.ge-editing .ge-tools-drawer .ge-details {
+  padding: 5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: none;
+}
+.ge-canvas.ge-editing .ge-tools-drawer .ge-details .btn-group a {
+  color: #333;
+}
+.ge-canvas.ge-editing .ge-tools-drawer .ge-details .btn-group a.active {
+  color: white;
+}
+.ge-canvas.ge-editing .ge-tools-drawer .ge-details .btn-group a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+.ge-canvas.ge-editing .ge-tools-drawer .ge-details input.ge-id {
+  border: 1px solid #7F7F7F;
+  border-radius: 4px;
+  font-size: 11px;
+  padding: 2px 5px;
+  margin-right: 5px;
+  width: 80px;
+}
+.ge-canvas.ge-editing .row {
+  position: relative;
+  display: flex;
+  background-color: #efefef;
+  border: 1px solid rgb(153, 153, 153);
+  padding: 0 5px 5px;
+  margin-bottom: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  flex-wrap: wrap;
+}
+.ge-canvas.ge-editing .row > .ge-tools-drawer {
+  flex: 1 1 100%;
+  width: 100%;
+  background: #e5e5e5;
+}
+.ge-canvas.ge-editing .row > .ge-tools-drawer > a {
+  color: #666;
+}
+.ge-canvas.ge-editing .row > .ge-tools-drawer > a.ge-add-column {
+  color: #178acc;
+}
+.ge-canvas.ge-editing .column {
+  background-color: black;
+  border: 1px solid #2FA4E7;
+  padding: 0 5px 5px;
+}
+.ge-canvas.ge-editing .column > .ge-tools-drawer {
+  background: #afd5ea;
+}
+.ge-canvas.ge-editing .column > .ge-tools-drawer a {
+  color: #178acc;
+}
+.ge-canvas.ge-editing .column > .ge-tools-drawer > a.ge-add-row {
+  color: #666;
+}
+.ge-canvas.ge-editing .col-bg .ge-content {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ge-canvas.ge-editing .ge-content-type-tinymce {
+  min-height: 100px;
+}
+.ge-canvas.ge-editing .ge-content-type-tinymce.active {
+  outline: 1px dotted #333;
+}
+.ge-canvas.ge-editing .ui-sortable-placeholder {
+  background: black;
+  visibility: visible !important;
+  min-height: 50px;
+  max-height: 100px;
+}
+
+/* Layout modes */
+.ge-canvas.ge-layout-phone-xs {
+  max-width: 576px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-1,
+.ge-canvas.ge-layout-phone-xs .col-xl-1,
+.ge-canvas.ge-layout-phone-xs .col-lg-1,
+.ge-canvas.ge-layout-phone-xs .col-md-1,
+.ge-canvas.ge-layout-phone-xs .col-sm-1,
+.ge-canvas.ge-layout-phone-xs .col-1 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-1,
+.ge-canvas.ge-layout-phone-xs .order-xl-1,
+.ge-canvas.ge-layout-phone-xs .order-lg-1,
+.ge-canvas.ge-layout-phone-xs .order-md-1,
+.ge-canvas.ge-layout-phone-xs .order-1 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-2,
+.ge-canvas.ge-layout-phone-xs .col-xl-2,
+.ge-canvas.ge-layout-phone-xs .col-lg-2,
+.ge-canvas.ge-layout-phone-xs .col-md-2,
+.ge-canvas.ge-layout-phone-xs .col-sm-2,
+.ge-canvas.ge-layout-phone-xs .col-2 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-2,
+.ge-canvas.ge-layout-phone-xs .order-xl-2,
+.ge-canvas.ge-layout-phone-xs .order-lg-2,
+.ge-canvas.ge-layout-phone-xs .order-md-2,
+.ge-canvas.ge-layout-phone-xs .order-2 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-3,
+.ge-canvas.ge-layout-phone-xs .col-xl-3,
+.ge-canvas.ge-layout-phone-xs .col-lg-3,
+.ge-canvas.ge-layout-phone-xs .col-md-3,
+.ge-canvas.ge-layout-phone-xs .col-sm-3,
+.ge-canvas.ge-layout-phone-xs .col-3 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-3,
+.ge-canvas.ge-layout-phone-xs .order-xl-3,
+.ge-canvas.ge-layout-phone-xs .order-lg-3,
+.ge-canvas.ge-layout-phone-xs .order-md-3,
+.ge-canvas.ge-layout-phone-xs .order-3 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-4,
+.ge-canvas.ge-layout-phone-xs .col-xl-4,
+.ge-canvas.ge-layout-phone-xs .col-lg-4,
+.ge-canvas.ge-layout-phone-xs .col-md-4,
+.ge-canvas.ge-layout-phone-xs .col-sm-4,
+.ge-canvas.ge-layout-phone-xs .col-4 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-4,
+.ge-canvas.ge-layout-phone-xs .order-xl-4,
+.ge-canvas.ge-layout-phone-xs .order-lg-4,
+.ge-canvas.ge-layout-phone-xs .order-md-4,
+.ge-canvas.ge-layout-phone-xs .order-4 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-5,
+.ge-canvas.ge-layout-phone-xs .col-xl-5,
+.ge-canvas.ge-layout-phone-xs .col-lg-5,
+.ge-canvas.ge-layout-phone-xs .col-md-5,
+.ge-canvas.ge-layout-phone-xs .col-sm-5,
+.ge-canvas.ge-layout-phone-xs .col-5 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-5,
+.ge-canvas.ge-layout-phone-xs .order-xl-5,
+.ge-canvas.ge-layout-phone-xs .order-lg-5,
+.ge-canvas.ge-layout-phone-xs .order-md-5,
+.ge-canvas.ge-layout-phone-xs .order-5 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-6,
+.ge-canvas.ge-layout-phone-xs .col-xl-6,
+.ge-canvas.ge-layout-phone-xs .col-lg-6,
+.ge-canvas.ge-layout-phone-xs .col-md-6,
+.ge-canvas.ge-layout-phone-xs .col-sm-6,
+.ge-canvas.ge-layout-phone-xs .col-6 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-6,
+.ge-canvas.ge-layout-phone-xs .order-xl-6,
+.ge-canvas.ge-layout-phone-xs .order-lg-6,
+.ge-canvas.ge-layout-phone-xs .order-md-6,
+.ge-canvas.ge-layout-phone-xs .order-6 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-7,
+.ge-canvas.ge-layout-phone-xs .col-xl-7,
+.ge-canvas.ge-layout-phone-xs .col-lg-7,
+.ge-canvas.ge-layout-phone-xs .col-md-7,
+.ge-canvas.ge-layout-phone-xs .col-sm-7,
+.ge-canvas.ge-layout-phone-xs .col-7 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-7,
+.ge-canvas.ge-layout-phone-xs .order-xl-7,
+.ge-canvas.ge-layout-phone-xs .order-lg-7,
+.ge-canvas.ge-layout-phone-xs .order-md-7,
+.ge-canvas.ge-layout-phone-xs .order-7 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-8,
+.ge-canvas.ge-layout-phone-xs .col-xl-8,
+.ge-canvas.ge-layout-phone-xs .col-lg-8,
+.ge-canvas.ge-layout-phone-xs .col-md-8,
+.ge-canvas.ge-layout-phone-xs .col-sm-8,
+.ge-canvas.ge-layout-phone-xs .col-8 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-8,
+.ge-canvas.ge-layout-phone-xs .order-xl-8,
+.ge-canvas.ge-layout-phone-xs .order-lg-8,
+.ge-canvas.ge-layout-phone-xs .order-md-8,
+.ge-canvas.ge-layout-phone-xs .order-8 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-9,
+.ge-canvas.ge-layout-phone-xs .col-xl-9,
+.ge-canvas.ge-layout-phone-xs .col-lg-9,
+.ge-canvas.ge-layout-phone-xs .col-md-9,
+.ge-canvas.ge-layout-phone-xs .col-sm-9,
+.ge-canvas.ge-layout-phone-xs .col-9 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-9,
+.ge-canvas.ge-layout-phone-xs .order-xl-9,
+.ge-canvas.ge-layout-phone-xs .order-lg-9,
+.ge-canvas.ge-layout-phone-xs .order-md-9,
+.ge-canvas.ge-layout-phone-xs .order-9 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-10,
+.ge-canvas.ge-layout-phone-xs .col-xl-10,
+.ge-canvas.ge-layout-phone-xs .col-lg-10,
+.ge-canvas.ge-layout-phone-xs .col-md-10,
+.ge-canvas.ge-layout-phone-xs .col-sm-10,
+.ge-canvas.ge-layout-phone-xs .col-10 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-10,
+.ge-canvas.ge-layout-phone-xs .order-xl-10,
+.ge-canvas.ge-layout-phone-xs .order-lg-10,
+.ge-canvas.ge-layout-phone-xs .order-md-10,
+.ge-canvas.ge-layout-phone-xs .order-10 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-11,
+.ge-canvas.ge-layout-phone-xs .col-xl-11,
+.ge-canvas.ge-layout-phone-xs .col-lg-11,
+.ge-canvas.ge-layout-phone-xs .col-md-11,
+.ge-canvas.ge-layout-phone-xs .col-sm-11,
+.ge-canvas.ge-layout-phone-xs .col-11 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-11,
+.ge-canvas.ge-layout-phone-xs .order-xl-11,
+.ge-canvas.ge-layout-phone-xs .order-lg-11,
+.ge-canvas.ge-layout-phone-xs .order-md-11,
+.ge-canvas.ge-layout-phone-xs .order-11 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-xxl-12,
+.ge-canvas.ge-layout-phone-xs .col-xl-12,
+.ge-canvas.ge-layout-phone-xs .col-lg-12,
+.ge-canvas.ge-layout-phone-xs .col-md-12,
+.ge-canvas.ge-layout-phone-xs .col-sm-12,
+.ge-canvas.ge-layout-phone-xs .col-12 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .order-xxl-12,
+.ge-canvas.ge-layout-phone-xs .order-xl-12,
+.ge-canvas.ge-layout-phone-xs .order-lg-12,
+.ge-canvas.ge-layout-phone-xs .order-md-12,
+.ge-canvas.ge-layout-phone-xs .order-12 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-xs .col-1 {
+  width: 8.3333333333%;
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+}
+.ge-canvas.ge-layout-phone-xs .order-1 {
+  order: 1;
+}
+.ge-canvas.ge-layout-phone-xs .col-2 {
+  width: 16.6666666667%;
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+.ge-canvas.ge-layout-phone-xs .order-2 {
+  order: 2;
+}
+.ge-canvas.ge-layout-phone-xs .col-3 {
+  width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.ge-canvas.ge-layout-phone-xs .order-3 {
+  order: 3;
+}
+.ge-canvas.ge-layout-phone-xs .col-4 {
+  width: 33.3333333333%;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+.ge-canvas.ge-layout-phone-xs .order-4 {
+  order: 4;
+}
+.ge-canvas.ge-layout-phone-xs .col-5 {
+  width: 41.6666666667%;
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+.ge-canvas.ge-layout-phone-xs .order-5 {
+  order: 5;
+}
+.ge-canvas.ge-layout-phone-xs .col-6 {
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.ge-canvas.ge-layout-phone-xs .order-6 {
+  order: 6;
+}
+.ge-canvas.ge-layout-phone-xs .col-7 {
+  width: 58.3333333333%;
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+.ge-canvas.ge-layout-phone-xs .order-7 {
+  order: 7;
+}
+.ge-canvas.ge-layout-phone-xs .col-8 {
+  width: 66.6666666666%;
+  flex: 0 0 66.6666666666%;
+  max-width: 66.6666666666%;
+}
+.ge-canvas.ge-layout-phone-xs .order-8 {
+  order: 8;
+}
+.ge-canvas.ge-layout-phone-xs .col-9 {
+  width: 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.ge-canvas.ge-layout-phone-xs .order-9 {
+  order: 9;
+}
+.ge-canvas.ge-layout-phone-xs .col-10 {
+  width: 83.3333333333%;
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+.ge-canvas.ge-layout-phone-xs .order-10 {
+  order: 10;
+}
+.ge-canvas.ge-layout-phone-xs .col-11 {
+  width: 91.6666666666%;
+  flex: 0 0 91.6666666666%;
+  max-width: 91.6666666666%;
+}
+.ge-canvas.ge-layout-phone-xs .order-11 {
+  order: 11;
+}
+.ge-canvas.ge-layout-phone-xs .col-12 {
+  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.ge-canvas.ge-layout-phone-xs .order-12 {
+  order: 12;
+}
+
+.ge-canvas.ge-layout-phone-sm {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-1,
+.ge-canvas.ge-layout-phone-sm .col-xl-1,
+.ge-canvas.ge-layout-phone-sm .col-lg-1,
+.ge-canvas.ge-layout-phone-sm .col-md-1,
+.ge-canvas.ge-layout-phone-sm .col-1,
+.ge-canvas.ge-layout-phone-sm .col-1 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-1,
+.ge-canvas.ge-layout-phone-sm .order-xl-1,
+.ge-canvas.ge-layout-phone-sm .order-lg-1,
+.ge-canvas.ge-layout-phone-sm .order-md-1,
+.ge-canvas.ge-layout-phone-sm .order-1 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-2,
+.ge-canvas.ge-layout-phone-sm .col-xl-2,
+.ge-canvas.ge-layout-phone-sm .col-lg-2,
+.ge-canvas.ge-layout-phone-sm .col-md-2,
+.ge-canvas.ge-layout-phone-sm .col-2,
+.ge-canvas.ge-layout-phone-sm .col-2 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-2,
+.ge-canvas.ge-layout-phone-sm .order-xl-2,
+.ge-canvas.ge-layout-phone-sm .order-lg-2,
+.ge-canvas.ge-layout-phone-sm .order-md-2,
+.ge-canvas.ge-layout-phone-sm .order-2 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-3,
+.ge-canvas.ge-layout-phone-sm .col-xl-3,
+.ge-canvas.ge-layout-phone-sm .col-lg-3,
+.ge-canvas.ge-layout-phone-sm .col-md-3,
+.ge-canvas.ge-layout-phone-sm .col-3,
+.ge-canvas.ge-layout-phone-sm .col-3 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-3,
+.ge-canvas.ge-layout-phone-sm .order-xl-3,
+.ge-canvas.ge-layout-phone-sm .order-lg-3,
+.ge-canvas.ge-layout-phone-sm .order-md-3,
+.ge-canvas.ge-layout-phone-sm .order-3 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-4,
+.ge-canvas.ge-layout-phone-sm .col-xl-4,
+.ge-canvas.ge-layout-phone-sm .col-lg-4,
+.ge-canvas.ge-layout-phone-sm .col-md-4,
+.ge-canvas.ge-layout-phone-sm .col-4,
+.ge-canvas.ge-layout-phone-sm .col-4 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-4,
+.ge-canvas.ge-layout-phone-sm .order-xl-4,
+.ge-canvas.ge-layout-phone-sm .order-lg-4,
+.ge-canvas.ge-layout-phone-sm .order-md-4,
+.ge-canvas.ge-layout-phone-sm .order-4 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-5,
+.ge-canvas.ge-layout-phone-sm .col-xl-5,
+.ge-canvas.ge-layout-phone-sm .col-lg-5,
+.ge-canvas.ge-layout-phone-sm .col-md-5,
+.ge-canvas.ge-layout-phone-sm .col-5,
+.ge-canvas.ge-layout-phone-sm .col-5 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-5,
+.ge-canvas.ge-layout-phone-sm .order-xl-5,
+.ge-canvas.ge-layout-phone-sm .order-lg-5,
+.ge-canvas.ge-layout-phone-sm .order-md-5,
+.ge-canvas.ge-layout-phone-sm .order-5 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-6,
+.ge-canvas.ge-layout-phone-sm .col-xl-6,
+.ge-canvas.ge-layout-phone-sm .col-lg-6,
+.ge-canvas.ge-layout-phone-sm .col-md-6,
+.ge-canvas.ge-layout-phone-sm .col-6,
+.ge-canvas.ge-layout-phone-sm .col-6 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-6,
+.ge-canvas.ge-layout-phone-sm .order-xl-6,
+.ge-canvas.ge-layout-phone-sm .order-lg-6,
+.ge-canvas.ge-layout-phone-sm .order-md-6,
+.ge-canvas.ge-layout-phone-sm .order-6 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-7,
+.ge-canvas.ge-layout-phone-sm .col-xl-7,
+.ge-canvas.ge-layout-phone-sm .col-lg-7,
+.ge-canvas.ge-layout-phone-sm .col-md-7,
+.ge-canvas.ge-layout-phone-sm .col-7,
+.ge-canvas.ge-layout-phone-sm .col-7 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-7,
+.ge-canvas.ge-layout-phone-sm .order-xl-7,
+.ge-canvas.ge-layout-phone-sm .order-lg-7,
+.ge-canvas.ge-layout-phone-sm .order-md-7,
+.ge-canvas.ge-layout-phone-sm .order-7 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-8,
+.ge-canvas.ge-layout-phone-sm .col-xl-8,
+.ge-canvas.ge-layout-phone-sm .col-lg-8,
+.ge-canvas.ge-layout-phone-sm .col-md-8,
+.ge-canvas.ge-layout-phone-sm .col-8,
+.ge-canvas.ge-layout-phone-sm .col-8 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-8,
+.ge-canvas.ge-layout-phone-sm .order-xl-8,
+.ge-canvas.ge-layout-phone-sm .order-lg-8,
+.ge-canvas.ge-layout-phone-sm .order-md-8,
+.ge-canvas.ge-layout-phone-sm .order-8 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-9,
+.ge-canvas.ge-layout-phone-sm .col-xl-9,
+.ge-canvas.ge-layout-phone-sm .col-lg-9,
+.ge-canvas.ge-layout-phone-sm .col-md-9,
+.ge-canvas.ge-layout-phone-sm .col-9,
+.ge-canvas.ge-layout-phone-sm .col-9 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-9,
+.ge-canvas.ge-layout-phone-sm .order-xl-9,
+.ge-canvas.ge-layout-phone-sm .order-lg-9,
+.ge-canvas.ge-layout-phone-sm .order-md-9,
+.ge-canvas.ge-layout-phone-sm .order-9 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-10,
+.ge-canvas.ge-layout-phone-sm .col-xl-10,
+.ge-canvas.ge-layout-phone-sm .col-lg-10,
+.ge-canvas.ge-layout-phone-sm .col-md-10,
+.ge-canvas.ge-layout-phone-sm .col-10,
+.ge-canvas.ge-layout-phone-sm .col-10 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-10,
+.ge-canvas.ge-layout-phone-sm .order-xl-10,
+.ge-canvas.ge-layout-phone-sm .order-lg-10,
+.ge-canvas.ge-layout-phone-sm .order-md-10,
+.ge-canvas.ge-layout-phone-sm .order-10 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-11,
+.ge-canvas.ge-layout-phone-sm .col-xl-11,
+.ge-canvas.ge-layout-phone-sm .col-lg-11,
+.ge-canvas.ge-layout-phone-sm .col-md-11,
+.ge-canvas.ge-layout-phone-sm .col-11,
+.ge-canvas.ge-layout-phone-sm .col-11 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-11,
+.ge-canvas.ge-layout-phone-sm .order-xl-11,
+.ge-canvas.ge-layout-phone-sm .order-lg-11,
+.ge-canvas.ge-layout-phone-sm .order-md-11,
+.ge-canvas.ge-layout-phone-sm .order-11 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-xxl-12,
+.ge-canvas.ge-layout-phone-sm .col-xl-12,
+.ge-canvas.ge-layout-phone-sm .col-lg-12,
+.ge-canvas.ge-layout-phone-sm .col-md-12,
+.ge-canvas.ge-layout-phone-sm .col-12,
+.ge-canvas.ge-layout-phone-sm .col-12 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .order-xxl-12,
+.ge-canvas.ge-layout-phone-sm .order-xl-12,
+.ge-canvas.ge-layout-phone-sm .order-lg-12,
+.ge-canvas.ge-layout-phone-sm .order-md-12,
+.ge-canvas.ge-layout-phone-sm .order-12 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-1 {
+  width: 8.3333333333%;
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-1 {
+  order: 1;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-2 {
+  width: 16.6666666667%;
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-2 {
+  order: 2;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-3 {
+  width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-3 {
+  order: 3;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-4 {
+  width: 33.3333333333%;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-4 {
+  order: 4;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-5 {
+  width: 41.6666666667%;
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-5 {
+  order: 5;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-6 {
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-6 {
+  order: 6;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-7 {
+  width: 58.3333333333%;
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-7 {
+  order: 7;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-8 {
+  width: 66.6666666666%;
+  flex: 0 0 66.6666666666%;
+  max-width: 66.6666666666%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-8 {
+  order: 8;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-9 {
+  width: 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-9 {
+  order: 9;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-10 {
+  width: 83.3333333333%;
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-10 {
+  order: 10;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-11 {
+  width: 91.6666666666%;
+  flex: 0 0 91.6666666666%;
+  max-width: 91.6666666666%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-11 {
+  order: 11;
+}
+.ge-canvas.ge-layout-phone-sm .col-sm-12 {
+  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.ge-canvas.ge-layout-phone-sm .order-sm-12 {
+  order: 12;
+}
+
+.ge-canvas.ge-layout-tablet-md {
+  max-width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-1,
+.ge-canvas.ge-layout-tablet-md .col-xl-1,
+.ge-canvas.ge-layout-tablet-md .col-lg-1,
+.ge-canvas.ge-layout-tablet-md .col-sm-1,
+.ge-canvas.ge-layout-tablet-md .col-1,
+.ge-canvas.ge-layout-tablet-md .col-1 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-1,
+.ge-canvas.ge-layout-tablet-md .order-xl-1,
+.ge-canvas.ge-layout-tablet-md .order-lg-1,
+.ge-canvas.ge-layout-tablet-md .order-sm-1,
+.ge-canvas.ge-layout-tablet-md .order-1 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-2,
+.ge-canvas.ge-layout-tablet-md .col-xl-2,
+.ge-canvas.ge-layout-tablet-md .col-lg-2,
+.ge-canvas.ge-layout-tablet-md .col-sm-2,
+.ge-canvas.ge-layout-tablet-md .col-2,
+.ge-canvas.ge-layout-tablet-md .col-2 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-2,
+.ge-canvas.ge-layout-tablet-md .order-xl-2,
+.ge-canvas.ge-layout-tablet-md .order-lg-2,
+.ge-canvas.ge-layout-tablet-md .order-sm-2,
+.ge-canvas.ge-layout-tablet-md .order-2 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-3,
+.ge-canvas.ge-layout-tablet-md .col-xl-3,
+.ge-canvas.ge-layout-tablet-md .col-lg-3,
+.ge-canvas.ge-layout-tablet-md .col-sm-3,
+.ge-canvas.ge-layout-tablet-md .col-3,
+.ge-canvas.ge-layout-tablet-md .col-3 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-3,
+.ge-canvas.ge-layout-tablet-md .order-xl-3,
+.ge-canvas.ge-layout-tablet-md .order-lg-3,
+.ge-canvas.ge-layout-tablet-md .order-sm-3,
+.ge-canvas.ge-layout-tablet-md .order-3 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-4,
+.ge-canvas.ge-layout-tablet-md .col-xl-4,
+.ge-canvas.ge-layout-tablet-md .col-lg-4,
+.ge-canvas.ge-layout-tablet-md .col-sm-4,
+.ge-canvas.ge-layout-tablet-md .col-4,
+.ge-canvas.ge-layout-tablet-md .col-4 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-4,
+.ge-canvas.ge-layout-tablet-md .order-xl-4,
+.ge-canvas.ge-layout-tablet-md .order-lg-4,
+.ge-canvas.ge-layout-tablet-md .order-sm-4,
+.ge-canvas.ge-layout-tablet-md .order-4 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-5,
+.ge-canvas.ge-layout-tablet-md .col-xl-5,
+.ge-canvas.ge-layout-tablet-md .col-lg-5,
+.ge-canvas.ge-layout-tablet-md .col-sm-5,
+.ge-canvas.ge-layout-tablet-md .col-5,
+.ge-canvas.ge-layout-tablet-md .col-5 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-5,
+.ge-canvas.ge-layout-tablet-md .order-xl-5,
+.ge-canvas.ge-layout-tablet-md .order-lg-5,
+.ge-canvas.ge-layout-tablet-md .order-sm-5,
+.ge-canvas.ge-layout-tablet-md .order-5 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-6,
+.ge-canvas.ge-layout-tablet-md .col-xl-6,
+.ge-canvas.ge-layout-tablet-md .col-lg-6,
+.ge-canvas.ge-layout-tablet-md .col-sm-6,
+.ge-canvas.ge-layout-tablet-md .col-6,
+.ge-canvas.ge-layout-tablet-md .col-6 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-6,
+.ge-canvas.ge-layout-tablet-md .order-xl-6,
+.ge-canvas.ge-layout-tablet-md .order-lg-6,
+.ge-canvas.ge-layout-tablet-md .order-sm-6,
+.ge-canvas.ge-layout-tablet-md .order-6 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-7,
+.ge-canvas.ge-layout-tablet-md .col-xl-7,
+.ge-canvas.ge-layout-tablet-md .col-lg-7,
+.ge-canvas.ge-layout-tablet-md .col-sm-7,
+.ge-canvas.ge-layout-tablet-md .col-7,
+.ge-canvas.ge-layout-tablet-md .col-7 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-7,
+.ge-canvas.ge-layout-tablet-md .order-xl-7,
+.ge-canvas.ge-layout-tablet-md .order-lg-7,
+.ge-canvas.ge-layout-tablet-md .order-sm-7,
+.ge-canvas.ge-layout-tablet-md .order-7 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-8,
+.ge-canvas.ge-layout-tablet-md .col-xl-8,
+.ge-canvas.ge-layout-tablet-md .col-lg-8,
+.ge-canvas.ge-layout-tablet-md .col-sm-8,
+.ge-canvas.ge-layout-tablet-md .col-8,
+.ge-canvas.ge-layout-tablet-md .col-8 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-8,
+.ge-canvas.ge-layout-tablet-md .order-xl-8,
+.ge-canvas.ge-layout-tablet-md .order-lg-8,
+.ge-canvas.ge-layout-tablet-md .order-sm-8,
+.ge-canvas.ge-layout-tablet-md .order-8 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-9,
+.ge-canvas.ge-layout-tablet-md .col-xl-9,
+.ge-canvas.ge-layout-tablet-md .col-lg-9,
+.ge-canvas.ge-layout-tablet-md .col-sm-9,
+.ge-canvas.ge-layout-tablet-md .col-9,
+.ge-canvas.ge-layout-tablet-md .col-9 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-9,
+.ge-canvas.ge-layout-tablet-md .order-xl-9,
+.ge-canvas.ge-layout-tablet-md .order-lg-9,
+.ge-canvas.ge-layout-tablet-md .order-sm-9,
+.ge-canvas.ge-layout-tablet-md .order-9 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-10,
+.ge-canvas.ge-layout-tablet-md .col-xl-10,
+.ge-canvas.ge-layout-tablet-md .col-lg-10,
+.ge-canvas.ge-layout-tablet-md .col-sm-10,
+.ge-canvas.ge-layout-tablet-md .col-10,
+.ge-canvas.ge-layout-tablet-md .col-10 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-10,
+.ge-canvas.ge-layout-tablet-md .order-xl-10,
+.ge-canvas.ge-layout-tablet-md .order-lg-10,
+.ge-canvas.ge-layout-tablet-md .order-sm-10,
+.ge-canvas.ge-layout-tablet-md .order-10 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-11,
+.ge-canvas.ge-layout-tablet-md .col-xl-11,
+.ge-canvas.ge-layout-tablet-md .col-lg-11,
+.ge-canvas.ge-layout-tablet-md .col-sm-11,
+.ge-canvas.ge-layout-tablet-md .col-11,
+.ge-canvas.ge-layout-tablet-md .col-11 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-11,
+.ge-canvas.ge-layout-tablet-md .order-xl-11,
+.ge-canvas.ge-layout-tablet-md .order-lg-11,
+.ge-canvas.ge-layout-tablet-md .order-sm-11,
+.ge-canvas.ge-layout-tablet-md .order-11 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-xxl-12,
+.ge-canvas.ge-layout-tablet-md .col-xl-12,
+.ge-canvas.ge-layout-tablet-md .col-lg-12,
+.ge-canvas.ge-layout-tablet-md .col-sm-12,
+.ge-canvas.ge-layout-tablet-md .col-12,
+.ge-canvas.ge-layout-tablet-md .col-12 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .order-xxl-12,
+.ge-canvas.ge-layout-tablet-md .order-xl-12,
+.ge-canvas.ge-layout-tablet-md .order-lg-12,
+.ge-canvas.ge-layout-tablet-md .order-sm-12,
+.ge-canvas.ge-layout-tablet-md .order-12 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-1 {
+  width: 8.3333333333%;
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-1 {
+  order: 1;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-2 {
+  width: 16.6666666667%;
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-2 {
+  order: 2;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-3 {
+  width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-3 {
+  order: 3;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-4 {
+  width: 33.3333333333%;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-4 {
+  order: 4;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-5 {
+  width: 41.6666666667%;
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-5 {
+  order: 5;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-6 {
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-6 {
+  order: 6;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-7 {
+  width: 58.3333333333%;
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-7 {
+  order: 7;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-8 {
+  width: 66.6666666666%;
+  flex: 0 0 66.6666666666%;
+  max-width: 66.6666666666%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-8 {
+  order: 8;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-9 {
+  width: 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-9 {
+  order: 9;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-10 {
+  width: 83.3333333333%;
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-10 {
+  order: 10;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-11 {
+  width: 91.6666666666%;
+  flex: 0 0 91.6666666666%;
+  max-width: 91.6666666666%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-11 {
+  order: 11;
+}
+.ge-canvas.ge-layout-tablet-md .col-md-12 {
+  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.ge-canvas.ge-layout-tablet-md .order-md-12 {
+  order: 12;
+}
+
+.ge-canvas.ge-layout-tablet-lg {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-1,
+.ge-canvas.ge-layout-tablet-lg .col-xl-1,
+.ge-canvas.ge-layout-tablet-lg .col-md-1,
+.ge-canvas.ge-layout-tablet-lg .col-sm-1,
+.ge-canvas.ge-layout-tablet-lg .col-1,
+.ge-canvas.ge-layout-tablet-lg .col-1 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-1,
+.ge-canvas.ge-layout-tablet-lg .order-xl-1,
+.ge-canvas.ge-layout-tablet-lg .order-md-1,
+.ge-canvas.ge-layout-tablet-lg .order-sm-1,
+.ge-canvas.ge-layout-tablet-lg .order-1 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-2,
+.ge-canvas.ge-layout-tablet-lg .col-xl-2,
+.ge-canvas.ge-layout-tablet-lg .col-md-2,
+.ge-canvas.ge-layout-tablet-lg .col-sm-2,
+.ge-canvas.ge-layout-tablet-lg .col-2,
+.ge-canvas.ge-layout-tablet-lg .col-2 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-2,
+.ge-canvas.ge-layout-tablet-lg .order-xl-2,
+.ge-canvas.ge-layout-tablet-lg .order-md-2,
+.ge-canvas.ge-layout-tablet-lg .order-sm-2,
+.ge-canvas.ge-layout-tablet-lg .order-2 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-3,
+.ge-canvas.ge-layout-tablet-lg .col-xl-3,
+.ge-canvas.ge-layout-tablet-lg .col-md-3,
+.ge-canvas.ge-layout-tablet-lg .col-sm-3,
+.ge-canvas.ge-layout-tablet-lg .col-3,
+.ge-canvas.ge-layout-tablet-lg .col-3 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-3,
+.ge-canvas.ge-layout-tablet-lg .order-xl-3,
+.ge-canvas.ge-layout-tablet-lg .order-md-3,
+.ge-canvas.ge-layout-tablet-lg .order-sm-3,
+.ge-canvas.ge-layout-tablet-lg .order-3 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-4,
+.ge-canvas.ge-layout-tablet-lg .col-xl-4,
+.ge-canvas.ge-layout-tablet-lg .col-md-4,
+.ge-canvas.ge-layout-tablet-lg .col-sm-4,
+.ge-canvas.ge-layout-tablet-lg .col-4,
+.ge-canvas.ge-layout-tablet-lg .col-4 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-4,
+.ge-canvas.ge-layout-tablet-lg .order-xl-4,
+.ge-canvas.ge-layout-tablet-lg .order-md-4,
+.ge-canvas.ge-layout-tablet-lg .order-sm-4,
+.ge-canvas.ge-layout-tablet-lg .order-4 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-5,
+.ge-canvas.ge-layout-tablet-lg .col-xl-5,
+.ge-canvas.ge-layout-tablet-lg .col-md-5,
+.ge-canvas.ge-layout-tablet-lg .col-sm-5,
+.ge-canvas.ge-layout-tablet-lg .col-5,
+.ge-canvas.ge-layout-tablet-lg .col-5 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-5,
+.ge-canvas.ge-layout-tablet-lg .order-xl-5,
+.ge-canvas.ge-layout-tablet-lg .order-md-5,
+.ge-canvas.ge-layout-tablet-lg .order-sm-5,
+.ge-canvas.ge-layout-tablet-lg .order-5 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-6,
+.ge-canvas.ge-layout-tablet-lg .col-xl-6,
+.ge-canvas.ge-layout-tablet-lg .col-md-6,
+.ge-canvas.ge-layout-tablet-lg .col-sm-6,
+.ge-canvas.ge-layout-tablet-lg .col-6,
+.ge-canvas.ge-layout-tablet-lg .col-6 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-6,
+.ge-canvas.ge-layout-tablet-lg .order-xl-6,
+.ge-canvas.ge-layout-tablet-lg .order-md-6,
+.ge-canvas.ge-layout-tablet-lg .order-sm-6,
+.ge-canvas.ge-layout-tablet-lg .order-6 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-7,
+.ge-canvas.ge-layout-tablet-lg .col-xl-7,
+.ge-canvas.ge-layout-tablet-lg .col-md-7,
+.ge-canvas.ge-layout-tablet-lg .col-sm-7,
+.ge-canvas.ge-layout-tablet-lg .col-7,
+.ge-canvas.ge-layout-tablet-lg .col-7 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-7,
+.ge-canvas.ge-layout-tablet-lg .order-xl-7,
+.ge-canvas.ge-layout-tablet-lg .order-md-7,
+.ge-canvas.ge-layout-tablet-lg .order-sm-7,
+.ge-canvas.ge-layout-tablet-lg .order-7 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-8,
+.ge-canvas.ge-layout-tablet-lg .col-xl-8,
+.ge-canvas.ge-layout-tablet-lg .col-md-8,
+.ge-canvas.ge-layout-tablet-lg .col-sm-8,
+.ge-canvas.ge-layout-tablet-lg .col-8,
+.ge-canvas.ge-layout-tablet-lg .col-8 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-8,
+.ge-canvas.ge-layout-tablet-lg .order-xl-8,
+.ge-canvas.ge-layout-tablet-lg .order-md-8,
+.ge-canvas.ge-layout-tablet-lg .order-sm-8,
+.ge-canvas.ge-layout-tablet-lg .order-8 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-9,
+.ge-canvas.ge-layout-tablet-lg .col-xl-9,
+.ge-canvas.ge-layout-tablet-lg .col-md-9,
+.ge-canvas.ge-layout-tablet-lg .col-sm-9,
+.ge-canvas.ge-layout-tablet-lg .col-9,
+.ge-canvas.ge-layout-tablet-lg .col-9 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-9,
+.ge-canvas.ge-layout-tablet-lg .order-xl-9,
+.ge-canvas.ge-layout-tablet-lg .order-md-9,
+.ge-canvas.ge-layout-tablet-lg .order-sm-9,
+.ge-canvas.ge-layout-tablet-lg .order-9 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-10,
+.ge-canvas.ge-layout-tablet-lg .col-xl-10,
+.ge-canvas.ge-layout-tablet-lg .col-md-10,
+.ge-canvas.ge-layout-tablet-lg .col-sm-10,
+.ge-canvas.ge-layout-tablet-lg .col-10,
+.ge-canvas.ge-layout-tablet-lg .col-10 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-10,
+.ge-canvas.ge-layout-tablet-lg .order-xl-10,
+.ge-canvas.ge-layout-tablet-lg .order-md-10,
+.ge-canvas.ge-layout-tablet-lg .order-sm-10,
+.ge-canvas.ge-layout-tablet-lg .order-10 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-11,
+.ge-canvas.ge-layout-tablet-lg .col-xl-11,
+.ge-canvas.ge-layout-tablet-lg .col-md-11,
+.ge-canvas.ge-layout-tablet-lg .col-sm-11,
+.ge-canvas.ge-layout-tablet-lg .col-11,
+.ge-canvas.ge-layout-tablet-lg .col-11 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-11,
+.ge-canvas.ge-layout-tablet-lg .order-xl-11,
+.ge-canvas.ge-layout-tablet-lg .order-md-11,
+.ge-canvas.ge-layout-tablet-lg .order-sm-11,
+.ge-canvas.ge-layout-tablet-lg .order-11 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-xxl-12,
+.ge-canvas.ge-layout-tablet-lg .col-xl-12,
+.ge-canvas.ge-layout-tablet-lg .col-md-12,
+.ge-canvas.ge-layout-tablet-lg .col-sm-12,
+.ge-canvas.ge-layout-tablet-lg .col-12,
+.ge-canvas.ge-layout-tablet-lg .col-12 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .order-xxl-12,
+.ge-canvas.ge-layout-tablet-lg .order-xl-12,
+.ge-canvas.ge-layout-tablet-lg .order-md-12,
+.ge-canvas.ge-layout-tablet-lg .order-sm-12,
+.ge-canvas.ge-layout-tablet-lg .order-12 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-1 {
+  width: 8.3333333333%;
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-1 {
+  order: 1;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-2 {
+  width: 16.6666666667%;
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-2 {
+  order: 2;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-3 {
+  width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-3 {
+  order: 3;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-4 {
+  width: 33.3333333333%;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-4 {
+  order: 4;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-5 {
+  width: 41.6666666667%;
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-5 {
+  order: 5;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-6 {
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-6 {
+  order: 6;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-7 {
+  width: 58.3333333333%;
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-7 {
+  order: 7;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-8 {
+  width: 66.6666666666%;
+  flex: 0 0 66.6666666666%;
+  max-width: 66.6666666666%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-8 {
+  order: 8;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-9 {
+  width: 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-9 {
+  order: 9;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-10 {
+  width: 83.3333333333%;
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-10 {
+  order: 10;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-11 {
+  width: 91.6666666666%;
+  flex: 0 0 91.6666666666%;
+  max-width: 91.6666666666%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-11 {
+  order: 11;
+}
+.ge-canvas.ge-layout-tablet-lg .col-lg-12 {
+  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.ge-canvas.ge-layout-tablet-lg .order-lg-12 {
+  order: 12;
+}
+
+.ge-canvas.ge-layout-desktop-xl {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-1,
+.ge-canvas.ge-layout-desktop-xl .col-lg-1,
+.ge-canvas.ge-layout-desktop-xl .col-md-1,
+.ge-canvas.ge-layout-desktop-xl .col-sm-1,
+.ge-canvas.ge-layout-desktop-xl .col-1,
+.ge-canvas.ge-layout-desktop-xl .col-1 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-1,
+.ge-canvas.ge-layout-desktop-xl .order-lg-1,
+.ge-canvas.ge-layout-desktop-xl .order-md-1,
+.ge-canvas.ge-layout-desktop-xl .order-sm-1,
+.ge-canvas.ge-layout-desktop-xl .order-1 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-2,
+.ge-canvas.ge-layout-desktop-xl .col-lg-2,
+.ge-canvas.ge-layout-desktop-xl .col-md-2,
+.ge-canvas.ge-layout-desktop-xl .col-sm-2,
+.ge-canvas.ge-layout-desktop-xl .col-2,
+.ge-canvas.ge-layout-desktop-xl .col-2 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-2,
+.ge-canvas.ge-layout-desktop-xl .order-lg-2,
+.ge-canvas.ge-layout-desktop-xl .order-md-2,
+.ge-canvas.ge-layout-desktop-xl .order-sm-2,
+.ge-canvas.ge-layout-desktop-xl .order-2 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-3,
+.ge-canvas.ge-layout-desktop-xl .col-lg-3,
+.ge-canvas.ge-layout-desktop-xl .col-md-3,
+.ge-canvas.ge-layout-desktop-xl .col-sm-3,
+.ge-canvas.ge-layout-desktop-xl .col-3,
+.ge-canvas.ge-layout-desktop-xl .col-3 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-3,
+.ge-canvas.ge-layout-desktop-xl .order-lg-3,
+.ge-canvas.ge-layout-desktop-xl .order-md-3,
+.ge-canvas.ge-layout-desktop-xl .order-sm-3,
+.ge-canvas.ge-layout-desktop-xl .order-3 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-4,
+.ge-canvas.ge-layout-desktop-xl .col-lg-4,
+.ge-canvas.ge-layout-desktop-xl .col-md-4,
+.ge-canvas.ge-layout-desktop-xl .col-sm-4,
+.ge-canvas.ge-layout-desktop-xl .col-4,
+.ge-canvas.ge-layout-desktop-xl .col-4 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-4,
+.ge-canvas.ge-layout-desktop-xl .order-lg-4,
+.ge-canvas.ge-layout-desktop-xl .order-md-4,
+.ge-canvas.ge-layout-desktop-xl .order-sm-4,
+.ge-canvas.ge-layout-desktop-xl .order-4 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-5,
+.ge-canvas.ge-layout-desktop-xl .col-lg-5,
+.ge-canvas.ge-layout-desktop-xl .col-md-5,
+.ge-canvas.ge-layout-desktop-xl .col-sm-5,
+.ge-canvas.ge-layout-desktop-xl .col-5,
+.ge-canvas.ge-layout-desktop-xl .col-5 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-5,
+.ge-canvas.ge-layout-desktop-xl .order-lg-5,
+.ge-canvas.ge-layout-desktop-xl .order-md-5,
+.ge-canvas.ge-layout-desktop-xl .order-sm-5,
+.ge-canvas.ge-layout-desktop-xl .order-5 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-6,
+.ge-canvas.ge-layout-desktop-xl .col-lg-6,
+.ge-canvas.ge-layout-desktop-xl .col-md-6,
+.ge-canvas.ge-layout-desktop-xl .col-sm-6,
+.ge-canvas.ge-layout-desktop-xl .col-6,
+.ge-canvas.ge-layout-desktop-xl .col-6 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-6,
+.ge-canvas.ge-layout-desktop-xl .order-lg-6,
+.ge-canvas.ge-layout-desktop-xl .order-md-6,
+.ge-canvas.ge-layout-desktop-xl .order-sm-6,
+.ge-canvas.ge-layout-desktop-xl .order-6 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-7,
+.ge-canvas.ge-layout-desktop-xl .col-lg-7,
+.ge-canvas.ge-layout-desktop-xl .col-md-7,
+.ge-canvas.ge-layout-desktop-xl .col-sm-7,
+.ge-canvas.ge-layout-desktop-xl .col-7,
+.ge-canvas.ge-layout-desktop-xl .col-7 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-7,
+.ge-canvas.ge-layout-desktop-xl .order-lg-7,
+.ge-canvas.ge-layout-desktop-xl .order-md-7,
+.ge-canvas.ge-layout-desktop-xl .order-sm-7,
+.ge-canvas.ge-layout-desktop-xl .order-7 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-8,
+.ge-canvas.ge-layout-desktop-xl .col-lg-8,
+.ge-canvas.ge-layout-desktop-xl .col-md-8,
+.ge-canvas.ge-layout-desktop-xl .col-sm-8,
+.ge-canvas.ge-layout-desktop-xl .col-8,
+.ge-canvas.ge-layout-desktop-xl .col-8 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-8,
+.ge-canvas.ge-layout-desktop-xl .order-lg-8,
+.ge-canvas.ge-layout-desktop-xl .order-md-8,
+.ge-canvas.ge-layout-desktop-xl .order-sm-8,
+.ge-canvas.ge-layout-desktop-xl .order-8 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-9,
+.ge-canvas.ge-layout-desktop-xl .col-lg-9,
+.ge-canvas.ge-layout-desktop-xl .col-md-9,
+.ge-canvas.ge-layout-desktop-xl .col-sm-9,
+.ge-canvas.ge-layout-desktop-xl .col-9,
+.ge-canvas.ge-layout-desktop-xl .col-9 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-9,
+.ge-canvas.ge-layout-desktop-xl .order-lg-9,
+.ge-canvas.ge-layout-desktop-xl .order-md-9,
+.ge-canvas.ge-layout-desktop-xl .order-sm-9,
+.ge-canvas.ge-layout-desktop-xl .order-9 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-10,
+.ge-canvas.ge-layout-desktop-xl .col-lg-10,
+.ge-canvas.ge-layout-desktop-xl .col-md-10,
+.ge-canvas.ge-layout-desktop-xl .col-sm-10,
+.ge-canvas.ge-layout-desktop-xl .col-10,
+.ge-canvas.ge-layout-desktop-xl .col-10 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-10,
+.ge-canvas.ge-layout-desktop-xl .order-lg-10,
+.ge-canvas.ge-layout-desktop-xl .order-md-10,
+.ge-canvas.ge-layout-desktop-xl .order-sm-10,
+.ge-canvas.ge-layout-desktop-xl .order-10 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-11,
+.ge-canvas.ge-layout-desktop-xl .col-lg-11,
+.ge-canvas.ge-layout-desktop-xl .col-md-11,
+.ge-canvas.ge-layout-desktop-xl .col-sm-11,
+.ge-canvas.ge-layout-desktop-xl .col-11,
+.ge-canvas.ge-layout-desktop-xl .col-11 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-11,
+.ge-canvas.ge-layout-desktop-xl .order-lg-11,
+.ge-canvas.ge-layout-desktop-xl .order-md-11,
+.ge-canvas.ge-layout-desktop-xl .order-sm-11,
+.ge-canvas.ge-layout-desktop-xl .order-11 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xxl-12,
+.ge-canvas.ge-layout-desktop-xl .col-lg-12,
+.ge-canvas.ge-layout-desktop-xl .col-md-12,
+.ge-canvas.ge-layout-desktop-xl .col-sm-12,
+.ge-canvas.ge-layout-desktop-xl .col-12,
+.ge-canvas.ge-layout-desktop-xl .col-12 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xxl-12,
+.ge-canvas.ge-layout-desktop-xl .order-lg-12,
+.ge-canvas.ge-layout-desktop-xl .order-md-12,
+.ge-canvas.ge-layout-desktop-xl .order-sm-12,
+.ge-canvas.ge-layout-desktop-xl .order-12 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-1 {
+  width: 8.3333333333%;
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-1 {
+  order: 1;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-2 {
+  width: 16.6666666667%;
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-2 {
+  order: 2;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-3 {
+  width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-3 {
+  order: 3;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-4 {
+  width: 33.3333333333%;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-4 {
+  order: 4;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-5 {
+  width: 41.6666666667%;
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-5 {
+  order: 5;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-6 {
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-6 {
+  order: 6;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-7 {
+  width: 58.3333333333%;
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-7 {
+  order: 7;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-8 {
+  width: 66.6666666666%;
+  flex: 0 0 66.6666666666%;
+  max-width: 66.6666666666%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-8 {
+  order: 8;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-9 {
+  width: 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-9 {
+  order: 9;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-10 {
+  width: 83.3333333333%;
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-10 {
+  order: 10;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-11 {
+  width: 91.6666666666%;
+  flex: 0 0 91.6666666666%;
+  max-width: 91.6666666666%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-11 {
+  order: 11;
+}
+.ge-canvas.ge-layout-desktop-xl .col-xl-12 {
+  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.ge-canvas.ge-layout-desktop-xl .order-xl-12 {
+  order: 12;
+}
+
+.ge-canvas.ge-layout-desktop-xxl {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-1,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-1,
+.ge-canvas.ge-layout-desktop-xxl .col-md-1,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-1,
+.ge-canvas.ge-layout-desktop-xxl .col-1,
+.ge-canvas.ge-layout-desktop-xxl .col-1 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-1,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-1,
+.ge-canvas.ge-layout-desktop-xxl .order-md-1,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-1,
+.ge-canvas.ge-layout-desktop-xxl .order-1 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-2,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-2,
+.ge-canvas.ge-layout-desktop-xxl .col-md-2,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-2,
+.ge-canvas.ge-layout-desktop-xxl .col-2,
+.ge-canvas.ge-layout-desktop-xxl .col-2 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-2,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-2,
+.ge-canvas.ge-layout-desktop-xxl .order-md-2,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-2,
+.ge-canvas.ge-layout-desktop-xxl .order-2 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-3,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-3,
+.ge-canvas.ge-layout-desktop-xxl .col-md-3,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-3,
+.ge-canvas.ge-layout-desktop-xxl .col-3,
+.ge-canvas.ge-layout-desktop-xxl .col-3 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-3,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-3,
+.ge-canvas.ge-layout-desktop-xxl .order-md-3,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-3,
+.ge-canvas.ge-layout-desktop-xxl .order-3 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-4,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-4,
+.ge-canvas.ge-layout-desktop-xxl .col-md-4,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-4,
+.ge-canvas.ge-layout-desktop-xxl .col-4,
+.ge-canvas.ge-layout-desktop-xxl .col-4 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-4,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-4,
+.ge-canvas.ge-layout-desktop-xxl .order-md-4,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-4,
+.ge-canvas.ge-layout-desktop-xxl .order-4 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-5,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-5,
+.ge-canvas.ge-layout-desktop-xxl .col-md-5,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-5,
+.ge-canvas.ge-layout-desktop-xxl .col-5,
+.ge-canvas.ge-layout-desktop-xxl .col-5 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-5,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-5,
+.ge-canvas.ge-layout-desktop-xxl .order-md-5,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-5,
+.ge-canvas.ge-layout-desktop-xxl .order-5 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-6,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-6,
+.ge-canvas.ge-layout-desktop-xxl .col-md-6,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-6,
+.ge-canvas.ge-layout-desktop-xxl .col-6,
+.ge-canvas.ge-layout-desktop-xxl .col-6 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-6,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-6,
+.ge-canvas.ge-layout-desktop-xxl .order-md-6,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-6,
+.ge-canvas.ge-layout-desktop-xxl .order-6 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-7,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-7,
+.ge-canvas.ge-layout-desktop-xxl .col-md-7,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-7,
+.ge-canvas.ge-layout-desktop-xxl .col-7,
+.ge-canvas.ge-layout-desktop-xxl .col-7 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-7,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-7,
+.ge-canvas.ge-layout-desktop-xxl .order-md-7,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-7,
+.ge-canvas.ge-layout-desktop-xxl .order-7 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-8,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-8,
+.ge-canvas.ge-layout-desktop-xxl .col-md-8,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-8,
+.ge-canvas.ge-layout-desktop-xxl .col-8,
+.ge-canvas.ge-layout-desktop-xxl .col-8 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-8,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-8,
+.ge-canvas.ge-layout-desktop-xxl .order-md-8,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-8,
+.ge-canvas.ge-layout-desktop-xxl .order-8 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-9,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-9,
+.ge-canvas.ge-layout-desktop-xxl .col-md-9,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-9,
+.ge-canvas.ge-layout-desktop-xxl .col-9,
+.ge-canvas.ge-layout-desktop-xxl .col-9 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-9,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-9,
+.ge-canvas.ge-layout-desktop-xxl .order-md-9,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-9,
+.ge-canvas.ge-layout-desktop-xxl .order-9 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-10,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-10,
+.ge-canvas.ge-layout-desktop-xxl .col-md-10,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-10,
+.ge-canvas.ge-layout-desktop-xxl .col-10,
+.ge-canvas.ge-layout-desktop-xxl .col-10 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-10,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-10,
+.ge-canvas.ge-layout-desktop-xxl .order-md-10,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-10,
+.ge-canvas.ge-layout-desktop-xxl .order-10 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-11,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-11,
+.ge-canvas.ge-layout-desktop-xxl .col-md-11,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-11,
+.ge-canvas.ge-layout-desktop-xxl .col-11,
+.ge-canvas.ge-layout-desktop-xxl .col-11 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-11,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-11,
+.ge-canvas.ge-layout-desktop-xxl .order-md-11,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-11,
+.ge-canvas.ge-layout-desktop-xxl .order-11 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xl-12,
+.ge-canvas.ge-layout-desktop-xxl .col-lg-12,
+.ge-canvas.ge-layout-desktop-xxl .col-md-12,
+.ge-canvas.ge-layout-desktop-xxl .col-sm-12,
+.ge-canvas.ge-layout-desktop-xxl .col-12,
+.ge-canvas.ge-layout-desktop-xxl .col-12 {
+  width: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xl-12,
+.ge-canvas.ge-layout-desktop-xxl .order-lg-12,
+.ge-canvas.ge-layout-desktop-xxl .order-md-12,
+.ge-canvas.ge-layout-desktop-xxl .order-sm-12,
+.ge-canvas.ge-layout-desktop-xxl .order-12 {
+  order: inherit;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-1 {
+  width: 8.3333333333%;
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-1 {
+  order: 1;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-2 {
+  width: 16.6666666667%;
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-2 {
+  order: 2;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-3 {
+  width: 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-3 {
+  order: 3;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-4 {
+  width: 33.3333333333%;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-4 {
+  order: 4;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-5 {
+  width: 41.6666666667%;
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-5 {
+  order: 5;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-6 {
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-6 {
+  order: 6;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-7 {
+  width: 58.3333333333%;
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-7 {
+  order: 7;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-8 {
+  width: 66.6666666666%;
+  flex: 0 0 66.6666666666%;
+  max-width: 66.6666666666%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-8 {
+  order: 8;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-9 {
+  width: 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-9 {
+  order: 9;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-10 {
+  width: 83.3333333333%;
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-10 {
+  order: 10;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-11 {
+  width: 91.6666666666%;
+  flex: 0 0 91.6666666666%;
+  max-width: 91.6666666666%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-11 {
+  order: 11;
+}
+.ge-canvas.ge-layout-desktop-xxl .col-xxl-12 {
+  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.ge-canvas.ge-layout-desktop-xxl .order-xxl-12 {
+  order: 12;
+}
+
+/*# sourceMappingURL=grideditor.css.map */

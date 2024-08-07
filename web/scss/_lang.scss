@@ -1,0 +1,64 @@
+
+.lang {
+  margin: 0;
+  padding: 0;
+
+  span {
+    display: none;
+  }
+
+  ul {
+    top:0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    list-style: none;
+
+    li {
+      margin: 3px 0;
+      display: none;
+      position: relative;
+      @include phone-sm {
+        margin-inline: 0.5rem;
+      }
+      &.active{
+        margin-top: 0px;
+        margin-bottom: 3px;
+        display: block;
+      }
+
+      a {
+        width: 26px;
+        font-size: 1rem;
+        display: flex;
+        text-transform: uppercase;
+
+        @include phone-sm {
+          width: 2rem;
+        }
+      }
+
+      &.arrow {
+        display: none;
+      }
+
+      &.active, &:hover {
+        a {
+          color: var(--color-secondary);
+          @include tablet-lg {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+
+  }
+}
+.active-drop ul{
+  background-color: white;
+  @include border-radius(24px);
+}
+.active-drop ul li{
+  display: block;
+}

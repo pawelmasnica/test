@@ -1,0 +1,91 @@
+$font-size: 16px;
+/**basic colors*/
+/**#ee7d00*/
+$color-two:#127916;
+$color-three: #00ff12;
+$color-four: #313131;
+//0D8555
+//0CE859
+
+$color-eight: lighten($color-three,20%);
+
+$color-gr1: #000000;
+$color-gr2: #232323;
+
+$color-bg: var(--color-primary);
+$color-info: #e0412a;
+
+
+$color-stylize-bg: #fff8fb;
+$color-dark: #313131;
+$color-very-dark: #232323;
+$color-grey: #E4E4E4;
+$color-light-grey: #fdfdfd;
+
+$color-black: #000;
+$color-light: #DEDEDE;
+$color-very-light: #f3f3f3;
+$color-white: #fff;
+$color-very-light-bg: #F8F8F8;
+$color-form-border: var(--color-primary);
+$color-hover: var(--color-secondary);
+
+
+
+
+$datetimepicker-color: var(--color-primary);
+$color-transparent: transparent;
+
+
+$color-special: #dac79f;
+$color-special-one: $color-special;
+$color-background: rgba(0,0,0,.02);
+
+$color-background-button: $color-special;
+$color-background-section-form: #3b2000;
+
+$slider-item-border-color: #d9d9d9;
+
+$footer-background: var(--color-primary);
+$footer-color: $color-white;
+//forms
+$color-label: $color-dark; //kolor etykiety
+$color-border-control: var(--color-primary); //kolor ramki
+$color-background-control: $color-white; //kolor tła
+$color-control: $color-dark; //kolor tekstu
+$color-placeholder: $color-dark; //kolor placeholder
+$color-button-background: $color-dark;
+$color-navigation: #555;
+
+
+$default-font-size: 15px;
+$browser-context: 16; // Default
+
+$default-color: $color-dark;
+
+
+/*heihts*/
+
+$top-height: 44px;
+$logo-height: 56px;
+$logo-padding: 15px;
+
+
+$header-height: $top-height + $logo-height + 2 * ($logo-padding);
+$max-height: 100vh;
+$banner-slider-height: calc(100vh - 85px);
+$banner-mobile-slider-height: calc(100vh - 85px - 4rem);
+/**hamburger*/
+
+$hamburger-bar-color:var(--color-primary);
+$hamburger-bar-color-active: var(--color-secondary);
+
+
+$hamburger-button-height: 1.4rem;
+$hamburger-button-width: 1.4rem;
+//56.25%;
+$mobile-slider-ratio: 56.25%;
+
+
+$breadcrumb-divider: quote(">") !default;
+

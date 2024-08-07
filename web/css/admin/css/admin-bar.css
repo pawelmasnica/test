@@ -1,0 +1,227 @@
+/**background-color*/
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+@import "../../vendor/font-awesome.min.css";
+.container-width-sm {
+  max-width: 540px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-width-md {
+  max-width: 720px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-width-lg {
+  max-width: 960px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-width-xl {
+  max-width: 1140px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-width-xxl {
+  max-width: 1320px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/**
+admin
+*/
+.admin-panel .bootstrap-sizes {
+  display: none !important;
+}
+
+#admin-bar {
+  flex-direction: row-reverse;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  z-index: 999999999;
+  background-color: #164256;
+  color: #ddd;
+  border-top: 2px solid #ddd;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px !important;
+  -webkit-box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.12);
+  -khtml-box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.12);
+  -ms-box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.12);
+  -o-box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.12);
+}
+#admin-bar .container-fluid {
+  width: 100%;
+}
+#admin-bar .button-hide a.btn-link {
+  color: #ddd;
+  display: inline-block;
+}
+@media only screen and (max-width: 1199.98px) {
+  #admin-bar .button-hide a.btn-link {
+    font-size: 30px;
+  }
+  #admin-bar .button-hide a.btn-link span {
+    display: none;
+  }
+}
+#admin-bar .button-hide a.btn-link:hover {
+  color: #32bdfc;
+  text-decoration: none;
+}
+#admin-bar ul.list-unstyled {
+  display: flex;
+  justify-content: start;
+}
+#admin-bar ul.list-unstyled ul.dropdown-menu .fa.fa-angle-left {
+  margin-top: 6px;
+}
+#admin-bar ul.list-unstyled ul.dropdown-menu li a {
+  padding: 0 0.5rem;
+}
+#admin-bar ul.list-unstyled li {
+  display: flex;
+  align-items: center;
+}
+#admin-bar ul.list-unstyled li span {
+  display: block;
+}
+@media only screen and (max-width: 1199.98px) {
+  #admin-bar ul.list-unstyled li span {
+    display: none;
+  }
+}
+#admin-bar ul.list-unstyled li a.btn-link {
+  text-decoration: none;
+  color: #ddd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+}
+#admin-bar ul.list-unstyled li a.btn-link span {
+  margin: 0.3rem;
+  display: block;
+}
+@media only screen and (max-width: 1199.98px) {
+  #admin-bar ul.list-unstyled li a.btn-link {
+    font-size: 1.5rem;
+  }
+  #admin-bar ul.list-unstyled li a.btn-link span {
+    display: none;
+  }
+}
+#admin-bar ul.list-unstyled li a.btn-link:hover {
+  color: #32bdfc;
+  text-decoration: none;
+}
+#admin-bar ul.list-inline > li {
+  position: relative;
+}
+#admin-bar ul.list-inline > li:not(:last-child) a:after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  width: 1px;
+  height: 10px;
+  top: 50%;
+  margin-top: -5px;
+  background-color: #ddd;
+}
+@media only screen and (max-width: 1199.98px) {
+  #admin-bar ul.list-inline > li:not(:last-child) a:after {
+    display: none;
+  }
+}
+#admin-bar.bar-hidden {
+  width: auto;
+  right: 0;
+  left: auto;
+}
+#admin-bar.bar-hidden #admin-bar-hide-button {
+  position: static;
+}
+#admin-bar.bar-hidden #admin-bar-hide-button span, #admin-bar.bar-hidden .container-fluid {
+  display: none;
+}
+#admin-bar #admin-bar-hide-button {
+  padding: 5px;
+}
+#admin-bar .dropup {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+#admin-bar .dropup ul.dropdown-menu {
+  min-width: 20rem;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: #164256;
+}
+#admin-bar .dropup ul.dropdown-menu > li > a:focus, #admin-bar .dropup ul.dropdown-menu > li > a:hover {
+  background-color: #444;
+}
+#admin-bar .dropup ul.dropdown-menu li {
+  padding: 3px 0;
+}
+#admin-bar .dropup ul.dropdown-menu li a {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  width: 100%;
+}
+#admin-bar .dropup ul.dropdown-menu li a.btn-primary, #admin-bar .dropup ul.dropdown-menu li a.btn-primary:focus {
+  background-color: #164256;
+  color: #fff;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+#admin-bar .dropup ul.dropdown-menu li a.fa {
+  margin-top: 6px;
+  right: 15px;
+  position: absolute;
+}
+#admin-bar .dropup ul.dropdown-menu li a span {
+  display: inline-block;
+  color: #fff;
+}
+#admin-bar .dropup ul.dropdown-menu li a span.fa {
+  color: #ddd;
+}
+
+/*# sourceMappingURL=admin-bar.css.map */

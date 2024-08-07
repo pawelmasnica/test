@@ -1,0 +1,229 @@
+.search-form {
+  input, button {
+    @include rounded(0);
+    border: $color-white 1px solid;
+    background-color: var(--color-primary);
+    color: $color-white;
+
+  }
+
+  input:focus {
+    border-right: none;
+  }
+
+  button {
+    border-left: none;
+  }
+
+  button:hover, button:focus {
+    background-color: transparent;
+    color: $color-white;
+    border: $color-white 1px solid;
+    border-left: none;
+  }
+
+  [placeholder] {
+    @include placeholder($color-dark);
+  }
+}
+
+
+section.section{
+
+
+  .form-container {
+
+    button.button{
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    label {
+      font-weight: normal;
+      display: none;
+    }
+
+    .contact-form {
+      textarea {
+        height: 10rem;
+      }
+    }
+
+    // Use placeholder mixin (the size parameter is optional)
+    [placeholder] {
+      @include placeholder($color-dark);
+    }
+
+    .form-control{
+      padding: 0;
+    }
+    input, input[readonly], textarea {
+      color: $color-dark;
+      line-height: 3rem;
+      font-family: var(--font-text);
+      letter-spacing: .05em;
+      background-color: transparent !important;
+      border: none;
+      border-bottom: 1px solid $color-light;
+      outline: 0;
+      @include rounded(0);
+      text-align: left;
+      font-size: 1rem;
+
+      .input-daterange input {
+        text-align: left;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border-bottom: 1px solid var(--color-primary);
+
+      }
+    }
+
+
+    h2 {
+      text-align: center;
+      font-family: var(--font-header);
+      font-size: 36px;
+      font-weight: 300;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 300;
+
+    }
+  }
+  .agree-control{
+    .form-group{
+      display: flex;
+      flex-direction: row-reverse;
+      font-size: 0.9rem;
+      input{
+        margin-top: 10px;
+      }
+    }
+    label{
+      display: block;
+    }
+  }
+}
+.input-daterange input {
+  background: url("../images/common/ico_cal.png") no-repeat center right;
+  @include tablet-lg {
+    background-image: none;
+  }
+}
+
+#reservation_form_email {
+  background: url("../images/common/ico_envelope.png") no-repeat center right;
+  @include tablet-lg {
+    background-image: none;
+  }
+}
+
+#reservation_form_persons {
+  background: url("../images/common/ico_person.png") no-repeat center right;
+  @include tablet-lg {
+    background-image: none;
+  }
+}
+
+.reservation-inline-form {
+  @include transition();
+  max-width: 360px;
+  top: 100%;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  background-color: $color-four;
+  text-align: center;
+  padding: 10px;
+  z-index: 999;
+  margin-top: -40px;
+
+  &.form-open {
+    margin-top: 0;
+    top: auto;
+    bottom: 0;
+  }
+
+  @include tablet-lg {
+    display: block;
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .form-switcher {
+    color: $color-white;
+
+    span {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 5px;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  form.form-inline {
+    .form-group {
+      position: relative;
+      margin: 3px 0;
+    }
+
+    input, button {
+      @include rounded(0);
+      width: 100%;
+      text-align: left;
+    }
+
+    i {
+      position: absolute;
+      top: 11px;
+      right: 24px;
+      color: var(--color-primary);
+    }
+
+    .button {
+
+      .form-group {
+        display: block;
+      }
+    }
+
+    .form-group {
+      display: block;
+    }
+
+    .form-control {
+      width: 100%;
+    }
+
+    button {
+      text-align: center;
+      width: 100%;
+      display: block;
+      background-color: var(--color-primary);
+      color: $color-white;
+
+      &:hover, &:focus {
+        background-color: var(--color-primary-lighten);
+        color: $color-white;
+      }
+    }
+  }
+}

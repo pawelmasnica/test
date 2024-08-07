@@ -1,0 +1,72 @@
+$font-family:'Roboto', sans-serif;
+$font-one: $font-family;
+$font-three: $font-family;
+$font-navigation: $font-family;
+
+$font-size: 1rem;
+
+/**basic colors*/
+$color-one: #254;
+$color-two: #ff9500;
+$color-three: #90c0a1;
+$color-four: #ac1a2b;
+$color-five: #d6de27;
+$color-bg:#f5f5f5;
+
+
+
+$button-height: 25px;
+$button-width: 25px;
+
+$color-dark: #222222;
+$color-very-dark: #1d1d1d;
+$color-grey: #dbdbdb;
+$color-black: #000;
+$color-light: #d3d3d3;
+$color-very-light: #f5f5f5;
+$color-white: #fff;
+
+$color-form-border:$color-four;
+
+
+$datetimepicker-color: #6c737b;
+$color-transparent: transparent;
+
+$color-special: #dac79f;
+$color-special-one: $color-special;
+$color-background: $color-white;
+
+$color-background-button: $color-special;
+$color-background-section-form: #3b2000;
+
+$slider-item-border-color: #d9d9d9;
+
+$footer-background: $color-one;
+$footer-color: $color-white;
+//forms
+$color-label: $color-dark; //kolor etykiety
+$color-border-control: $color-two; //kolor ramki
+$color-background-control: $color-white; //kolor tła
+$color-control: $color-dark; //kolor tekstu
+$color-placeholder: $color-one; //kolor placeholder
+$color-button-background: $color-dark;
+$color-navigation: #555;
+
+
+$default-font-size: 15px;
+$browser-context: 16; // Default
+
+$default-color: $color-dark;
+
+
+/*heihts*/
+
+$top-height: 40px;
+$logo-height: 56px;
+$logo-padding: 15px;
+
+$header-height: $top-height + $logo-height + 2 * ($logo-padding);
+$max-height: 100vh;
+$banner-slider-height: calc(#{$max-height} - #{$header-height});
+
+

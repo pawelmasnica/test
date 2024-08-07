@@ -1,0 +1,21 @@
+.counter-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  .counter{
+    padding: 0.4rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+  }
+
+  .counter-content{
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,585 @@
+
+section.section {
+  .widget-tabs {
+    ul.nav-tabs {
+      li::before {
+        display: none !important;
+      }
+    }
+
+    .tab-content {
+      padding-top: 1rem;
+
+      h2.header {
+        color: $color-white;
+        background: none;
+      }
+    }
+
+    h3 {
+      border-bottom: 1px solid $color-grey;
+      margin-bottom: 2rem;
+      font-family: var(--font-text);
+    }
+
+    .tab-content {
+      @include tablet-lg {
+        margin-top: 2rem;
+      }
+    }
+
+    .nav-pills {
+      text-align: left;
+      margin: 0;
+
+      li {
+        margin: 0;
+        float: none;
+        display: block;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        border-bottom: 1px solid var(--color-primary);
+
+        a {
+
+          font-weight: bold;
+          @include rounded(0);
+          background: none;
+          color: var(--color-primary);
+          @include transition();
+
+          @include tablet-lg {
+            padding: 0;
+          }
+        }
+
+        &.active, &:hover {
+          a {
+            background: none;
+
+            color: var(--color-secondary);
+
+          }
+        }
+      }
+    }
+  }
+
+  .widget-list {
+    figcaption {
+      font-weight: bold;
+    }
+
+    figure {
+      cursor: pointer;
+      position: relative;
+      @include rounded(50%);
+      overflow: hidden;
+
+      .img-mask {
+        @include transition();
+        @include opacity(0);
+        font-size: 3rem;
+        color: $color-white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparentize($color-three, 0.6)
+      }
+
+      &:hover {
+        .img-mask {
+          @include opacity(1);
+        }
+      }
+    }
+  }
+
+  .accordion {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .widget-accordion {
+    background-color: white;
+
+
+    .accordion-collapse {
+      border: none;
+    }
+
+    .accordion-item {
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+      .accordion-header {
+        margin: 0;
+      }
+
+      button.accordion-button {
+        background-color: var(--color-primary);
+        border: none;
+        font-family: var(--font-text);
+        color: white;
+
+      }
+
+      .accordion-button.collapsed {
+        color: var(--color-primary);
+        background-color: white;
+      }
+
+      .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23657566'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        transform: rotate(180deg);
+      }
+
+    }
+  }
+
+
+  .wrapper-item-container-stylize {
+    overflow: hidden;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+
+      background-size: cover;
+      right:0;
+      bottom:0;
+      @include translate(25%,25%);
+    }
+
+
+  }
+
+  .widget-wrapper-item {
+    overflow: hidden;
+    .wrapper-item {
+      margin-bottom: 2rem;
+      position: relative;
+      flex-direction: row;
+      display: flex;
+      @include phone-sm {
+        flex-direction: column;
+      }
+
+
+      figure {
+        margin: 0;
+        background-size: cover;
+        background-position: center;
+        width: 40%;
+        position: relative;
+        z-index: 10;
+        @include tablet-lg {
+          width: 40%;
+        }
+        @include phone-sm {
+          width: 100%;
+          order: 0;
+          padding-bottom: calc(2 / 3 * 100% + 2rem);
+        }
+      }
+
+      .wrapper-item-container {
+
+        width: 60%;
+        margin: 2rem 0;
+        position: relative;
+        z-index: 11;
+        @include tablet-lg {
+          width: 60%;
+        }
+        @include phone-sm {
+          width: calc(100% - 2rem);
+          margin: -2rem 1rem 0 1rem;
+        }
+
+        .wrapper-item-container-stylize {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 19rem;
+          @include pageShadow();
+          padding: 3rem;
+          margin-left: -2rem;
+          margin-right: 0;
+          width: calc(100% + 2rem);
+          background-color: white;
+
+          @include phone-sm {
+            margin: 0;
+            width: 100%;
+            padding: 2rem;
+          }
+
+          .row {
+            margin: 0;
+            position: relative;
+            z-index: 99;
+
+            > .column {
+              padding: 0;
+            }
+          }
+
+          h3 {
+            font-weight: 700;
+            margin-top: 0;
+            font-family: var(--font-header);
+            font-size: 1.5rem;
+            color: var(--color-secondary)
+          }
+
+          p {
+            margin-bottom: 0;
+          }
+
+
+        }
+      }
+
+    }
+
+    & > div:nth-child(even) {
+      .wrapper-item {
+        figure {
+          order: 2;
+          @include phone-sm {
+            order: 0;
+          }
+        }
+
+        .wrapper-item-container-stylize {
+          margin-left: 0;
+          margin-right: -4rem;
+
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            bottom: 1rem;
+            right: 1rem;
+            left: 1rem;
+            border: 1px solid var(--color-primary-lightest);
+          }
+
+
+          @include phone-sm {
+            &:after {
+              content: '';
+              position: absolute;
+              top: 1rem;
+              bottom: 1rem;
+              right: 1rem;
+              left: 1rem;
+              border: 1px solid rgba(var(--color-primary), 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper-item-container-stylize {
+
+    @include phone-sm {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 1rem;
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        border: 1px solid rgba(var(--color-primary), 0.5);
+      }
+    }
+
+
+  }
+
+  .widget-cols2-item {
+    a {
+      color: white;
+    }
+
+    .wrapper-item {
+      margin-bottom: 2rem;
+      position: relative;
+      flex-direction: row;
+      display: flex;
+      @include phone-sm {
+        flex-direction: column;
+      }
+
+
+      figure {
+        margin: 0;
+        background-size: cover;
+        background-position: center;
+        width: 50%;
+        position: relative;
+        z-index: 10;
+        @include tablet-lg {
+          width: 100%;
+        }
+        @include phone-sm {
+          width: 100%;
+          order: 0;
+          padding-bottom: calc(2 / 3 * 100% + 2rem);
+        }
+      }
+
+      .wrapper-item-container {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        position: relative;
+        z-index: 11;
+        @include tablet-lg {
+          width: 100%;
+        }
+
+
+        .wrapper-item-container-stylize {
+          padding-top: 95px;
+          padding-bottom: 140px;
+          position: relative;
+          z-index: 1;
+
+          color: $color-dark;
+          text-align: left;
+          margin-right: 0;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          overflow: visible;
+
+
+          @include tablet-lg {
+
+            margin: 0;
+            width: 100%;
+            padding: 0 1rem;
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: 0.5rem;
+              right: 0.5rem;
+              bottom: 0.5rem;
+              left: 0.5rem;
+              border: 1px solid $color-very-light;
+              z-index: -1;
+            }
+          }
+
+
+          .wrapper-item-container-stylize-inner{
+            @include box-shadow();
+            background: $color-white  calc(100%  - 40px) bottom no-repeat;
+            padding: 3rem;
+            margin-left: -2rem;
+            z-index: 2;
+
+            @include tablet-lg {
+              margin: 0;
+              padding: 2rem;
+              background-position: bottom center;
+            }
+          }
+
+          h2 {
+            justify-content: left;
+            margin-top: 0;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            color: $color-three;
+            margin-bottom: 1rem;
+
+
+
+
+            &:before {
+              left: -100px;
+              content: '';
+              position: absolute;
+              top: 18px;
+              width: 80px;
+              height: 1px;
+              background-color: var(--color-primary);
+
+              -webkit-animation: leftright 1s infinite;
+              -moz-animation: leftright 1s infinite;
+              -o-animation: leftright 1s infinite;
+              animation: leftright 1s infinite;
+              @include tablet-lg {
+                left: -80px;
+                content: none;
+              }
+            }
+          }
+
+          p {
+            margin-bottom: 0;
+          }
+
+
+        }
+      }
+
+    }
+
+    & > div:nth-child(even) {
+      .wrapper-item {
+        figure {
+          order: 2;
+          @include phone-sm {
+            order: 0;
+          }
+        }
+
+        .wrapper-item-container-stylize {
+
+
+          .wrapper-item-container-stylize-inner{
+            @include box-shadow();
+            background: $color-light-grey  40px bottom  no-repeat;
+
+            padding: 3rem;
+            margin-right: -2rem;
+            margin-left: 0;
+            z-index: 2;
+
+
+            @include tablet-lg {
+              margin: 0;
+              padding: 2rem;
+              background-position: bottom center;
+            }
+          }
+
+          .row{
+            text-align: right;
+            @include tablet-lg {
+              text-align: center;
+            }
+          }
+
+          h2 {
+            position: relative;
+            justify-content: right;
+            margin-top: 0;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            color: $color-dark;
+            margin-bottom: 1rem;
+
+
+
+
+            &:before {
+              left: auto;
+              right: -100px;
+              content: '';
+              position: absolute;
+              top: 18px;
+              width: 80px;
+              height: 1px;
+              background-color: var(--color-primary);
+              @include tablet-lg {
+                content: none;
+              }
+            }
+
+          }
+
+
+          @include phone-sm {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .widget-tiles {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    position: relative;
+
+    .box {
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: calc(33.3% - 2rem);
+      margin: 1rem;
+
+      @include tablet-lg {
+        width: calc(50% - 2rem);
+      }
+
+      @include phone-sm {
+        width: 100%;
+        margin: 0;
+      }
+
+      figure {
+        margin: 0;
+        width: 100%;
+        padding-bottom: calc(2 / 3 * 100%);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .box-container {
+        min-height: 195px;
+        @include pageShadow();
+        width: calc(100% - 2rem);
+        margin: -1rem 1rem 1rem 1rem;
+        padding: 2rem;
+        position: relative;
+        z-index: 2;
+        background-color: white;
+        @include phone-sm {
+          min-height: auto;
+        }
+
+        .wrapper-item-container-stylize {
+
+          h3 {
+            margin-top: 0;
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
+@include theme1 {
+  section.section .widget-cols2-item .wrapper-item .wrapper-item-container .wrapper-item-container-stylize h2 {
+    color: var(--color-primary);
+  }
+}
+
+@include theme2 {
+  section.section .widget-cols2-item .wrapper-item .wrapper-item-container .wrapper-item-container-stylize h2 {
+    color: $color-three;
+  }
+}

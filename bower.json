@@ -1,0 +1,25 @@
+{
+  "name": "Media Complete CMS",
+  "version": "0.0.1",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "fontawesome": "4.7.0",
+    "animate.css": "3.5.2",
+    "owl-carousel2": "2.2.1"
+  },
+  "private": true,
+  "description": "",
+  "main": "",
+  "authors": [
+    "Tomek Fudala"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

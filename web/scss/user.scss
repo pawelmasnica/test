@@ -1,0 +1,16 @@
+/**import all scss files*/
+@import "partials/user_variables";
+@import "partials/mixins";
+@import "partials/sets";
+@import "partials/animations";
+
+
+@import 'user/global';
+@import 'user/structure';
+@import 'user/header';
+@import 'user/parameters';
+@import 'user/files';
+@import 'user/object';
+@import 'user/payu';
+@import 'user/dashboard';
+@import 'user/wizard';

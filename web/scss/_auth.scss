@@ -1,0 +1,58 @@
+.auth-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  h3{
+    text-align: center;
+  }
+  .logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    text-align: center;
+    svg,img{
+      width: 80%;
+      height: auto;
+      path,polygon{
+        fill: black;
+      }
+    }
+  }
+  .form-control{
+    padding: 0.75rem 1rem;
+  }
+  .auth-box{
+    width: 30rem;
+    @include rounded(1rem);
+    padding: 2rem;
+    @include pageShadow();
+    background-color: white;
+    @include phone-sm{
+      min-width: auto;
+      width: 100%;
+    }
+
+    a{
+      color: $color-dark !important;
+    }
+  }
+
+  .form-group{
+    padding: 0.5rem 0;
+  }
+
+  .login-buttons {
+    .btn-group {
+      display: block;
+      width: 100%;
+      .button{
+        justify-content: center;
+        width: 100%;
+        display: flex;
+      }
+    }
+  }
+}

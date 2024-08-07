@@ -1,0 +1,140 @@
+.review-slider {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+
+  .owl-stage-outer{
+    height: 100%;
+    padding: 0;
+    .owl-stage{
+      display: flex;
+      height: 100%;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: stretch;
+      .owl-item{
+        min-height: 100%;
+      }
+    }
+  }
+  .review {
+
+    border: 1px solid transparentize(black, 0.9);
+    padding: 2rem;
+    margin:0 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .reviewNameRate {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .reviewRate {
+        font-size: 1.625rem;
+      }
+
+      .reviewName {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.25rem;
+
+        span {
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: transparentize($color-two, 0.35);
+          @include rounded(50%);
+          width: 2.5rem;
+          height: 2.5rem;
+          margin-right: 0.4rem;
+          @include phone-sm{
+            height: auto;
+          }
+        }
+      }
+    }
+
+
+    .reviewText {
+      margin: 3rem 0;
+    }
+
+    .reviewSource {
+      text-align: center;
+    }
+    .reviewDate{
+      text-align: right;
+      font-style: italic;
+      color: var(--color-secondary);
+    }
+  }
+
+
+  .owl-dots{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    button{
+      display: flex;
+      margin: 0.2rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      @include rounded(50%);
+      background-color: #dedede;
+      &:hover,&.active{
+        background-color: darken(#dedede, 20%);
+      }
+    }
+  }
+}
+
+@include theme1{
+  .review-slider .review{
+    @include transition();
+    .reviewNameRate .reviewName span{
+      @include transition();
+      background-color: var(--color-primary);
+    }
+  }
+  .reviewDate{
+    color: var(--color-primary);
+  }
+  .review-slider .review:hover{
+    @include box-shadow();
+    .reviewNameRate .reviewName span{
+      background-color: var(--color-secondary);
+    }
+  }
+}
+
+
+@include theme2{
+  .review-slider .review{
+    @include transition();
+    .reviewNameRate .reviewName span{
+      @include transition();
+      background-color: $color-three;
+    }
+  }
+  .reviewDate{
+    color: $color-three;
+  }
+  .review-slider .review:hover{
+    @include box-shadow();
+    .reviewNameRate .reviewName span{
+      background-color: var(--color-secondary);
+    }
+  }
+}

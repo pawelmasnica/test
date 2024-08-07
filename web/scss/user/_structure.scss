@@ -1,0 +1,264 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  aside {
+    height: calc(100vh);
+    padding: 1rem;
+    z-index: 999;
+
+    position: fixed;
+    width: 16rem;
+    background-color: $color-dark;
+
+
+    @include tablet-md {
+      @include opacity(0);
+      margin-left: -20rem;
+    }
+
+
+    .logo {
+      position: relative;
+      width: 100%;
+      margin-bottom: 2rem;
+
+      img, svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .navigation-panel {
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+
+    ul.nav {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        a {
+
+          font-size: 1rem;
+          color: $color-white;
+        }
+      }
+    }
+  }
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    .container-fluid-wrapper{
+      width: 100%;
+      padding: 1rem;
+    }
+
+    @include transition();
+
+    position: relative;
+    @include tablet-md {
+      margin-left: 0;
+      padding: 0;
+
+    }
+
+    .card {
+      @include pageShadow();
+      @include border-radius(2rem);
+      background-color: $color-white;
+      padding: 2rem;
+      margin: 1rem 0;
+
+      &.cart-info {
+        border: red 2px solid;
+      }
+
+    }
+  }
+
+  aside ~ main {
+    margin-left: 16rem;
+  }
+
+
+  .help-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .help-icon {
+      background-color: var(--color-primary);
+      float: left;
+      padding: 15px 20px;
+      font-size: 30px;
+
+      i {
+        color: $color-white;
+      }
+    }
+
+    .help-description {
+      padding: 0 10px;
+      font-size: 16px;
+    }
+  }
+}
+
+.buttons {
+  margin-top: 2rem;
+  padding: 20px;
+  text-align: right;
+  background-color: $color-very-light;
+}
+
+fieldset {
+  position: relative;
+}
+
+label {
+  padding: 10px 0;
+}
+
+.as-input {
+  display: block;
+  padding: 5px;
+  background-color: $color-very-light;
+  border: 1px solid $color-light;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  line-height: 1.33;
+}
+
+.btn-circle {
+  color: $color-white;
+  background-color: var(--color-primary);
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+
+.badge__num {
+  font-size: 24px;
+  display: block;
+}
+
+
+/*over*/
+.hamburger-nav {
+  display: none;
+  padding: 3px;
+  position: relative;
+
+  height: $button-height;
+  width: $button-width;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+  @include tablet-lg {
+    display: block;
+  }
+
+  &:hover {
+    span {
+      background: var(--color-secondary);
+    }
+  }
+
+  &.active {
+    .top {
+      transform: translateY(8px) translateX(0) rotate(45deg);
+      background: $color-white;
+    }
+
+    .middle {
+      opacity: 0;
+      background: $color-white;
+    }
+
+    .bottom {
+      transform: translateY(-8px) translateX(0) rotate(-45deg);
+      background: $color-white;
+    }
+  }
+
+
+  span {
+    background: $color-white;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer;
+
+    &:nth-of-type(2) {
+      top: 8px;
+    }
+
+    &:nth-of-type(3) {
+      top: 16px;
+    }
+  }
+}
+
+#overlay {
+  z-index: 1;
+  position: fixed;
+  background: transparentize($color-black, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s;
+  overflow: hidden;
+}
+
+.navigation-opened {
+  #overlay {
+    opacity: .9;
+    visibility: visible;
+    height: 100%;
+  }
+
+  aside {
+    @include transition();
+    @include opacity(1);
+    padding-bottom: 30px;
+    height: 100%;
+    overflow-y: scroll;
+    position: fixed;
+    margin-left: 0;
+    z-index: 999;
+    @include box-shadow();
+
+  }
+
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}

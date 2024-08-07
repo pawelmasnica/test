@@ -1,0 +1,90 @@
+body {
+  min-height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background: #33414e fixed no-repeat;
+  background-size: cover;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #ddd;
+  overflow-x: hidden; }
+
+.video {
+  position: fixed;
+  z-index: 1; }
+
+.login-container .login-box .login-body {
+  width: 100%;
+  float: left;
+  background: rgba(51, 65, 78, 0.8);
+  padding: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+.login-container {
+  float: left;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  z-index: 2; }
+
+.login-container .login-box {
+  width: 400px;
+  margin: 0px auto;
+  padding-top: 100px; }
+
+.login-container .login-box .login-body .form-control {
+  border: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  color: #CCC;
+  line-height: 20px;
+  height: auto; }
+
+.login-container .login-box .login-body .btn-link {
+  color: #FFF;
+  border: 0px; }
+
+.login-container .login-box .login-body .login-or {
+  width: 40px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 25px auto;
+  text-align: center;
+  line-height: 25px;
+  color: #FFF; }
+
+.login-container .login-footer a,
+.login-container label {
+  color: #fff; }
+
+.login-container .login-body {
+  margin-bottom: 5px; }
+
+.login-container label {
+  font-size: 14px; }
+
+.login-title h5 {
+  font-weight: 300;
+  text-align: right; }
+
+/**
+===========================================
+MEDIA QUERIES
+===========================================
+*/
+/* Small devices (landscape phones, 34em and up)*/
+@media (min-width: 0em) {
+  .login-container .login-box {
+    width: 100%; } }
+/* Medium devices (tablets, 48em and up)*/
+@media (min-width: 48em) {
+  .login-container .login-box {
+    width: 400px; } }
+/*Large devices (desktops, 62em and up)*/
+/*Extra large devices (large desktops, 75em and up)*/
+
+/*# sourceMappingURL=signin.css.map */

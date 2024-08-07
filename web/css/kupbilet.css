@@ -1,0 +1,98 @@
+.btn-custom, .btn-custom--second{
+    display:none
+  }
+  
+@media(min-width:1200px){
+
+
+  .btn-custom{
+  
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 132px;
+      height: 132px;
+      background-color: rgba(0, 0, 0, 0.30);
+      stroke-width: 2px;
+      stroke: #FFF;
+      filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.25));
+      backdrop-filter: blur(3px);
+      border: 2px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+      color: #FFF;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+  }
+
+  .btn-custom:hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 132px;
+    height: 132px;
+    background-color: rgba(0, 0, 0, 0.30);
+    stroke-width: 2px;
+    stroke: #FFF;
+    filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(3px);
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .btn-custom--second{
+        transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+        display:none;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 122px;
+      height: 48px;
+      border-radius: 24px;
+      background: #2D5638;
+      box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+      border: none;
+      backdrop-filter: blur(2px);
+      cursor: pointer;
+      color: #FFF;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+  }
+
+  .btn--second:hover{
+    transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 122px;
+    height: 48px;
+    border-radius: 24px;
+    background: #2D5638;
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+    border: none;
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+
+}

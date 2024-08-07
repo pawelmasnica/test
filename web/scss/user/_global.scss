@@ -1,0 +1,122 @@
+html {
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: var(--font-text);
+  background: $color-very-light;
+  min-height: 100vh;
+  line-height: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+.error-list {
+  .error {
+    color: red;
+  }
+}
+
+.flash-messages {
+  z-index: 9999999;
+  position: relative;
+  max-width: 500px;
+  width: 500px;
+  margin: 1rem 0;
+  left: 50%;
+  margin-left: -250px;
+
+  button {
+    background: none;
+    border: none;
+    color: black;
+
+    span {
+      color: black;
+      font-size: 1.5rem;
+    }
+  }
+
+  .alert {
+    font-weight: bold;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    @include pageShadow();
+    border: 1px solid white;
+    @include border-radius(2rem);
+  }
+
+  .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #d4edda;
+  }
+
+  .alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f8d7da;
+  }
+}
+
+
+input, textarea {
+  border-color: var(--color-primary);
+  background-color: $color-white;
+
+  &.form-control {
+    @include border-radius(0);
+    padding: 1rem !important;
+    font-size: 1.1rem;
+    height: auto;
+  }
+
+  &.form-control-lg {
+    font-size: 1.3rem;
+  }
+}
+
+.btn, .alert {
+  @include border-radius(0);
+}
+
+.btn-primary {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+
+  &:hover, &:active {
+    border-color: var(--color-primary-darkest) ;
+    background-color: var(--color-primary-darkest) ;
+  }
+}
+
+.alert-success {
+  border-color: $color-three;
+  background-color: $color-three;
+  color: $color-white;
+
+  button {
+    color: $color-white;
+  }
+}
+
+.button-block {
+  display: block;
+}
+
+.buttons {
+   svg{
+     width: 1rem;
+     height: auto;
+     path{
+       fill: white;
+     }
+   }
+}

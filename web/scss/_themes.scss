@@ -1,0 +1,16 @@
+.theme1{
+
+  header#header .header-wrapper{
+    background: #fef9e9 url("../images/white-sand.png");
+  }
+}
+.theme2{
+  .social-media,
+  header#header .header-wrapper{
+    background: #666 url("../images/dark-sand.png");
+  }
+
+  header#header .navbar ul.navigation>li.active:not(.highlight)>a, header#header .navbar ul.navigation>li.active>a, header#header .navbar ul.navigation>li:hover:not(.highlight)>a, header#header .navbar ul.navigation>li:hover>a{
+    color: #9a5922;
+  }
+}

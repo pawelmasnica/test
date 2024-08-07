@@ -1,0 +1,258 @@
+.wizard {
+  background: linear-gradient(0deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  main {
+
+    .card{
+      box-shadow: none;
+      border: 0;
+    }
+    .container-fluid-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 50%;
+      width: 50%;
+
+      background-color: white;
+    }
+  }
+
+
+}
+
+.add-object {
+  max-width: 60rem;
+  margin: 0 auto !important;
+
+
+  .group-pictogram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .group-pictogram-item {
+      position: relative;
+      margin: 1rem;
+      width: calc(33% - 2rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      input {
+        display: none;
+      }
+
+      label {
+        @include transition();
+        @include pageShadow();
+        background-color: white;
+        @include border-radius(6px);
+        border: 1px solid $color-grey;
+        padding: 2rem;
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .user-pictogram {
+          max-width: 4rem;
+        }
+
+        &:hover {
+          border-color: black;
+        }
+      }
+
+
+      input:checked ~ label {
+        border-color: var(--color-primary);
+        @include pageShadow(rgba(0, 117, 255, 0.3));
+        .pictogram-descp {
+
+          color: var(--color-primary);
+        }
+      }
+    }
+
+
+  }
+
+
+  .plus-minus-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      flex: 2;
+    }
+
+    input {
+      text-align: center;
+      border: none;
+      width: 4rem;
+      margin: 0 1rem;
+      font-size: 1.4rem;
+
+      &:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+
+      &[readonly] {
+        background-color: transparent;
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      @include pageShadow();
+      padding: 0.7rem;
+
+      svg {
+        path, g {
+          fill: $color-black;
+        }
+      }
+
+      &:hover {
+        svg {
+          path, g {
+            fill: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+
+  .steps {
+    z-index: 1;
+    position: relative;
+    margin-bottom: 30px;
+
+
+    .step__separator {
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      margin-top: -6px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #ff4c4c 0, #a8405b 25%, #58477b 50%, #0050a0 75%, #003771);
+      background-size: 133.33%;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: inherit;
+        margin-left: auto;
+        background-color: #cacaca;
+        width: 100%;
+        transition: width .3s;
+      }
+    }
+
+    .step__list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      text-align: center;
+
+      .step__inner {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .step__img {
+        background-color: $color-grey;
+        position: relative;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+
+        color: #fff;
+        display: inline-block;
+        transition: color .3s, border-color .3s, background-color .3s;
+      }
+
+      h2 {
+        font-size: .875rem;
+        position: absolute;
+        font-weight: 400;
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+    }
+
+  }
+
+  &.step-1 {
+    .chooser-step {
+      display: flex;
+      justify-content: space-between;
+      @include tablet-lg {
+        flex-direction: column;
+      }
+    }
+
+    a {
+      text-align: center;
+      margin: 1rem;
+      padding: 2rem;
+      @include border-radius(2rem);
+      border: 2px solid $color-grey;
+
+      &:hover {
+        border-color: var(--color-primary);
+      }
+
+      @include tablet-lg {
+        margin: 1rem 0;
+      }
+
+      h3 {
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &.step-3 {
+
+
+  }
+
+  .info {
+    margin: 1rem 0;
+    padding: 2rem 1rem;
+    background-color: $color-very-light;
+  }
+
+
+}

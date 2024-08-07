@@ -1,0 +1,87 @@
+h2 {
+  font-family: var(--font-text);
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+h3 {
+  font-family: var(--font-text);
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+header.header {
+  color: $color-dark;
+  padding: 1rem;
+  z-index: 1000;
+  position: relative;
+  width: 100%;
+  top: 0;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include box-shadow();
+  max-height: 3rem;
+  align-items: center;
+  @include tablet-md {
+    flex-direction: row;
+    background-color: var(--color-primary);
+    justify-content: flex-end;
+  }
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+  }
+
+  svg {
+    margin: 0 0.5rem;
+    width: 1rem;
+    height: auto;
+
+    path, g {
+      fill: $color-dark;
+    }
+  }
+
+  a {
+    color: $color-dark;
+
+    &:hover {
+      color: darken($color-dark, 10%);
+      text-decoration: none;
+    }
+
+    &.navbar-brand {
+      height: auto;
+      padding: 0;
+    }
+  }
+
+
+
+
+  .top-bar{
+    color: $color-dark;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include tablet-md{
+
+      flex-direction: column;
+      .list-group-horizontal{
+        display: none;
+      }
+    }
+
+  }
+}
+
+.sticky-wrapper {
+  z-index: 9999;
+}

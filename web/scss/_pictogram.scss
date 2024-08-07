@@ -1,0 +1,314 @@
+.group-pictogram-list,
+.group-pictogram-tiles {
+  .pictogram-container.oval {
+    .shape {
+      border: 3px solid var(--color-primary);
+      position: relative;
+      background-color: white;
+      width: 12rem;
+      height: 12rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include rounded(50%);
+      color: var(--color-primary) !important;
+
+      &:after {
+        position: absolute;
+        border: 1rem solid $color-four;
+        content: "";
+        width: 110%;
+        height: 110%;
+        @include rounded(50%);
+        transform: scale(1);
+        animation: pulse 2s infinite;
+      }
+
+      .pictogram-wrapper {
+        h4 {
+          color: var(--color-primary);
+        }
+      }
+
+      .pictogram-img {
+        svg {
+          path {
+            fill: var(--color-primary) !important;
+          }
+        }
+      }
+    }
+  }
+
+
+  .pictogram-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include transition();
+
+
+    .pictogram-img {
+      top: 0;
+      position: relative;
+      @include transition();
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      svg {
+        height: 3rem;
+        width: auto;
+
+        path,circle {
+          fill: var(--color-primary);
+        }
+      }
+
+    }
+
+    .pictogram-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      flex-direction: column;
+
+
+      h4 {
+        text-align: center;
+        font-family: var(--font-header);
+        font-size: 1.2rem;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+
+    &:hover {
+      .pictogram-img {
+        top: -0.5rem;
+      }
+    }
+
+  }
+}
+
+.group-pictogram-slider {
+
+  .pictogram-img {
+    text-align: center;
+    padding: 0.5rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4{
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    svg{
+      max-width: 2.2rem;
+      width: 100%;
+      height: auto;
+
+      path, polygon{
+        fill: var(--color-primary);
+      }
+      use {
+        stroke: var(--color-primary);
+
+      }
+    }
+  }
+}
+
+.group-pictogram-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  .pictogram-tile {
+    padding: 1rem;
+    background-color: white;
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 11rem;
+    @include pageShadow();
+    @include rounded();
+    @include transition();
+    overflow: hidden;
+
+    @include tablet-md {
+      width: calc(50% - 2rem);
+    }
+    @include phone-sm {
+      width: calc(100% - 2rem);
+    }
+
+
+    .pictogram-img {
+      margin-bottom: 1rem;
+
+      img {
+        height: 2.875rem;
+        width: auto;
+      }
+    }
+
+    h5 {
+      font-size: 15px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    h6 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    &:hover {
+      @include pageShadowHover();
+
+      h5 {
+        color: var(--color-primary);
+      }
+
+      h6 {
+        color: var(--color-primary);
+      }
+    }
+
+  }
+}
+
+.group-pictogram-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .group-pictogram-list-header {
+    min-height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+
+    h3 {
+      margin: 0;
+      font-weight: bold !important;;
+      font-size: 1.375rem !important;
+      color: $color-dark !important;
+    }
+
+    .pictogram-img {
+      margin-right: 0.8rem;
+    }
+  }
+
+
+  .pictogram-wrapper {
+
+    a {
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 0.8rem 0;
+      display: block;
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: $color-dark;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+
+
+    h4 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+
+  .pictogram-container {
+    margin-bottom: 0.5rem;
+
+    .pictogram-img {
+      flex: 2rem;
+      margin-right: 1rem;
+      padding: 0;
+      margin-top: 0.2rem;
+
+      svg {
+        width: 2rem;
+      }
+    }
+
+
+    &:hover {
+      .pictogram-img {
+        margin-top: 0.2rem;
+      }
+    }
+  }
+}
+
+@include theme1 {
+  .pictogram-container {
+    .pictogram-img {
+
+      svg {
+        path {
+          @include transition();
+          fill: var(--color-primary);
+        }
+      }
+    }
+
+    &:hover {
+      .pictogram-img {
+        svg {
+          path {
+            fill: var(--color-secondary);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include theme2 {
+  .pictogram-container {
+    .pictogram-img {
+      svg {
+        path {
+          @include transition();
+          fill: $color-three;
+        }
+      }
+    }
+
+    &:hover {
+      .pictogram-img {
+        svg {
+          path {
+            fill: var(--color-secondary);
+          }
+        }
+      }
+    }
+  }
+}

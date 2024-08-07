@@ -1,0 +1,198 @@
+section.section .button, .button {
+  @include box-shadow();
+  cursor: pointer;
+  border-radius: var(--button-color-border-roundness);
+  -webkit-border-radius: var(--button-color-border-roundness);
+  -moz-border-radius: var(--button-color-border-roundness);
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: var(--button-font-size);
+  letter-spacing: var(--button-font-letter-spacing);;
+  font-weight: normal;
+  font-family: var(--font-text);
+  position: relative;
+  @include transition(200ms);
+  color: var(--button-color);
+  background-color: var(--button-color-bg);
+  border: 1px solid var(--button-color-border);
+  padding: 0.5rem 2.5rem;
+  text-align: center;
+  gap: 0.5rem;
+  @include phone-sm {
+    margin: 0.5rem 0;
+    padding: 0.4rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  svg {
+    width: 1rem;
+    height: auto;
+
+    path {
+      fill: var(--button-svg-fill-path);
+    }
+  }
+
+  &:hover {
+    background-color: var(--button-color-bg-hover);
+    border-color: var(--button-color-border-hover);
+    color: var(--button-color-hover) !important;
+
+
+    svg {
+      path {
+        fill: var(--button-svg-fill-path-hover);
+      }
+    }
+  }
+
+  &.button-block {
+    display: block;
+    width: 100%;
+  }
+
+  &.button-dark {
+    color: white !important;
+    background-color: $color-dark !important;
+    border: 1px solid $color-dark !important;
+
+    &:hover {
+      background-color: var(--color-primary) !important;
+      border: 1px solid var(--color-primary) !important;
+    }
+  }
+
+  &.small {
+    padding: 0.3rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  &.active {
+    background: var(--color-secondary);
+
+    &:hover {
+      background: $color-four;
+    }
+  }
+  &.button-outline {
+
+    border: 1px solid var(--button-color-bg) !important;
+    background-color: transparent !important;
+    color: var(--button-color-bg) !important;
+    &:hover {
+      background-color: var(--button-color-bg-hover) !important;
+      color: var(--button-color-hover) !important;
+      border: 1px solid var(--button-color-border-hover) !important;
+    }
+
+    &.small {
+      padding: 0.3rem 1rem;
+      font-size: 0.75rem;
+    }
+
+    svg {
+      margin: 0 1rem;
+      width: 1rem;
+      height: auto;
+
+      path {
+        fill: var(--color-primary);
+      }
+    }
+  }
+
+}
+.big-button{
+  @extend .button;
+  font-size: 1.75rem;
+  padding: 0.6rem 1.75rem;
+}
+
+
+.button-reverse {
+  @extend .button;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color:var(--color-primary-lightest);
+
+  &:hover {
+    background-color: var(--color-primary-lighten);
+    border: 1px solid var(--color-primary-lighten);
+    color:var(--color-secondary);
+  }
+}
+
+
+
+.button-link {
+  color: var(--color-primary) !important;
+  display: inline-flex;
+  font-family: var(--font-text);
+  position: relative;
+  @include transition(200ms);
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &:after {
+    @include transition(200ms);
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+
+  }
+
+  &:hover {
+
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+
+.button-outline-grey {
+  @extend .button-outline;
+  background-color: white;
+  border-color: transparentize($color-grey, 0.5);
+  font-weight: 600;
+  color: black !important;
+}
+
+.button-outline-grey2 {
+  @extend .button-outline;
+  background-color: white;
+  border-color: transparentize($color-grey, 0.5);
+  font-weight: 600;
+  color: black !important;
+
+  &:hover {
+    background-color: white;
+    border-color: var(--color-primary);
+    color: var(--color-primary) !important;
+  }
+}
+
+.reservation-button {
+  @include tablet-lg {
+    @include border-radius(0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.btt-chck-av {
+  display: none !important;
+  @include tablet-lg {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}

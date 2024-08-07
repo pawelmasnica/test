@@ -1,0 +1,33 @@
+#cookie-container {
+  text-align: center;
+  font-size: 12px;
+  position: fixed;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  color: $color-white;
+  background-color: $color-dark;
+  padding: 5px;
+  a {
+    @include transition();
+    display: inline-block;
+    border: 1px solid $color-white;
+    padding: 0 7px;
+    color: $color-white;
+    text-align: center;
+    &:hover {
+      background-color: darken($color-white, 15%);
+      color: $color-dark;
+    }
+
+    i {
+      display: none;
+    }
+  }
+  p {
+    display: inline;
+  }
+
+}

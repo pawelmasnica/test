@@ -1,0 +1,27 @@
+ul.contact-data{
+  list-style: none;
+
+  margin: 0;
+  a.phone{
+    color: $color-dark;
+    font-weight: bold;
+    font-family: var(--font-header);
+    &:hover{
+      color: var(--color-primary);
+    }
+  }
+  li{
+    overflow-wrap: anywhere;
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    font-size: 1.2rem;
+    img{
+      margin-right: 1rem;
+      height: auto;
+    }
+  }
+  li::before {
+    content: none;
+  }
+}
